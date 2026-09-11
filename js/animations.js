@@ -1,222 +1,208 @@
-// VC Organic Farms - GSAP Animation Core Engine
-// Handles: Sticky shrinking header, staggered page load, underline grow hovers, 3D cart droplet parallax, and hero scroll parallax layers.
+// VC Organic Farms — Kerala Backwater motion layer
+// Keeps existing ecommerce/cart/search/product behavior intact; this file only adds theme + presentation motion.
+(() => {
+  'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Ensure GSAP is loaded before executing
-  if (typeof gsap === 'undefined') {
-    console.warn("GSAP is not loaded. Skipping animations initialization.");
-    return;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+  function injectTheme() {
+    if (document.querySelector('link[data-kb-commerce-theme]')) return;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '/css/kerala-commerce-theme.css?v=1.0';
+    link.dataset.kbCommerceTheme = 'true';
+    document.head.appendChild(link);
+    document.documentElement.classList.add('kerala-commerce-theme');
   }
+  injectTheme();
 
-  // Register ScrollTrigger plugin
-  if (typeof ScrollTrigger !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger);
-  }
-
-  initHeaderEntrance();
-  initUnderlineHovers();
-  initCartDropletParallax();
-});
-
-// Runs on complete page load (including images/React components mount)
-window.addEventListener('load', () => {
-  if (typeof gsap === 'undefined') return;
-
-  initStickyHeader();
-  initHeroParallax();
-});
-
-// 1. Staggered Page Load Entrance Animation
-function initHeaderEntrance() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    return;
-  }
-
-  // Smooth clean slide-in of the header container
-  gsap.fromTo(".header-section", 
-    { y: -20, opacity: 0 },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 0.9,
-      ease: "power3.out",
-      delay: 0.1
+  document.addEventListener('DOMContentLoaded', () => {
+    injectTheme();
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
     }
-  );
-}
+    initStickyHeader();
+    initHeaderEntrance();
+    initUnderlineHovers();
+    initCartDropletParallax();
+    initCinematicDairyHero();
+    initKeralaReveals();
+    initPageTransitions();
+  });
 
-// 2. Active / Hover Underline Animation
-function initUnderlineHovers() {
-  const navLinks = document.querySelectorAll(".header-nav-wrap a.nav-link");
-  
-  navLinks.forEach(link => {
-    // Append a custom underline span if not already present
-    if (!link.querySelector(".nav-underline")) {
-      const underline = document.createElement("span");
-      underline.className = "nav-underline";
-      link.appendChild(underline);
+  window.addEventListener('load', () => {
+    initHeroParallax();
+    if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+  }, { once: true });
+
+  function initHeaderEntrance() {
+    if (reduced.matches || typeof gsap === 'undefined') return;
+    const header = $('.header-section');
+    if (!header) return;
+    gsap.fromTo(header,
+      { y: -18, autoAlpha: 0 },
+      { y: 0, autoAlpha: 1, duration: .9, ease: 'power3.out', delay: .08, clearProps: 'transform,opacity,visibility' }
+    );
+  }
+
+  function initUnderlineHovers() {
+    $$('.header-nav-wrap a.nav-link').forEach(link => {
+      let underline = $('.nav-underline', link);
+      if (!underline) {
+        underline = document.createElement('span');
+        underline.className = 'nav-underline';
+        link.appendChild(underline);
+      }
+      if (typeof gsap === 'undefined') return;
+      const active = link.classList.contains('w--current');
+      gsap.set(underline, { scaleX: active ? 1 : 0, transformOrigin: 'center' });
+      if (!active) {
+        link.addEventListener('mouseenter', () => gsap.to(underline, { scaleX: 1, duration: .35, ease: 'power2.out' }));
+        link.addEventListener('mouseleave', () => gsap.to(underline, { scaleX: 0, duration: .35, ease: 'power2.out' }));
+      }
+    });
+  }
+
+  function initCartDropletParallax() {
+    const cartButton = $('.header-cart-droplet');
+    if (!cartButton || typeof gsap === 'undefined' || reduced.matches) return;
+    const droplet = $('.droplet-3d', cartButton);
+    if (!droplet) return;
+    cartButton.addEventListener('mousemove', e => {
+      const r = cartButton.getBoundingClientRect();
+      const x = e.clientX - r.left - r.width / 2;
+      const y = e.clientY - r.top - r.height / 2;
+      gsap.to(droplet, { x: x * .12, y: y * .12, scale: 1.04, duration: .3, ease: 'power2.out' });
+      gsap.to(cartButton, { x: x * .05, y: y * .05, duration: .3, ease: 'power2.out' });
+    });
+    cartButton.addEventListener('mouseleave', () => {
+      gsap.to(droplet, { x: 0, y: 0, scale: 1, duration: .7, ease: 'elastic.out(1.1,.45)' });
+      gsap.to(cartButton, { x: 0, y: 0, duration: .5, ease: 'power2.out' });
+    });
+  }
+
+  function initStickyHeader() {
+    const header = $('.header-section');
+    if (!header || header.dataset.kbStickyBound) return;
+    header.dataset.kbStickyBound = 'true';
+    const update = () => header.classList.toggle('header-scrolled', window.scrollY > 45);
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+  }
+
+  // Homepage only: reuse the repository's existing dairy film as the Kerala-style full-bleed hero media.
+  function initCinematicDairyHero() {
+    const hero = $('.bonsai-hero');
+    if (!hero || hero.querySelector('.theme-ambient-video')) return;
+
+    const video = document.createElement('video');
+    video.className = 'theme-ambient-video';
+    video.setAttribute('aria-hidden', 'true');
+    video.muted = true;
+    video.defaultMuted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.preload = 'metadata';
+    video.poster = '/img/dairy_farm_bg.png';
+    video.src = '/img/milk%20vidoe.mp4';
+    hero.prepend(video);
+
+    const play = () => {
+      if (!reduced.matches && !document.hidden) video.play().catch(() => {});
+    };
+    if (reduced.matches) video.pause(); else play();
+    video.addEventListener('loadeddata', play, { once: true });
+    document.addEventListener('visibilitychange', () => document.hidden ? video.pause() : play());
+    window.addEventListener('pageshow', play);
+    reduced.addEventListener?.('change', e => e.matches ? video.pause() : play());
+
+    if (typeof gsap !== 'undefined' && !reduced.matches) {
+      const heroItems = $$('.bonsai-left-content > *', hero);
+      if (heroItems.length) {
+        gsap.fromTo(heroItems,
+          { y: 22, autoAlpha: 0 },
+          { y: 0, autoAlpha: 1, duration: .95, stagger: .11, ease: 'power3.out', delay: .12, clearProps: 'transform,opacity,visibility' }
+        );
+      }
+      const product = $('.bonsai-right-stage', hero);
+      if (product) gsap.fromTo(product, { y: 20, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 1, delay: .35, ease: 'power3.out' });
     }
-    
-    const underline = link.querySelector(".nav-underline");
-    const isCurrent = link.classList.contains("w--current");
+  }
 
-    // Initialize scales
-    if (isCurrent) {
-      gsap.set(underline, { scaleX: 1, transformOrigin: "center" });
-    } else {
-      gsap.set(underline, { scaleX: 0, transformOrigin: "center" });
-      
-      // Animate hover grow from center
-      link.addEventListener("mouseenter", () => {
-        gsap.to(underline, {
-          scaleX: 1,
-          duration: 0.45,
-          ease: "power2.out"
-        });
+  // Same quiet reveal language as kerala-backwater: complete blocks, no fractured headings.
+  function initKeralaReveals() {
+    const candidates = [
+      ...$$('main section:not(.bonsai-hero)'),
+      ...$$('.products-card'),
+      ...$$('.product-detail-card'),
+      ...$$('.details-tabs-container'),
+      ...$$('.blog-card'),
+      ...$$('.faq-item')
+    ];
+    const unique = [...new Set(candidates)].filter(el => !el.closest('.bonsai-hero'));
+    unique.forEach(el => el.setAttribute('data-kb-reveal', ''));
+    if (reduced.matches || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+    unique.forEach(el => {
+      gsap.fromTo(el,
+        { y: 24, autoAlpha: .01 },
+        {
+          y: 0, autoAlpha: 1, duration: .85, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 94%', once: true },
+          clearProps: 'transform,opacity,visibility'
+        }
+      );
+    });
+  }
+
+  function initHeroParallax() {
+    const hero = $('.bonsai-hero');
+    if (!hero || reduced.matches || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+    const video = $('.theme-ambient-video', hero);
+    if (video) {
+      gsap.to(video, {
+        yPercent: 11, ease: 'none',
+        scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 1 }
       });
-
-      link.addEventListener("mouseleave", () => {
-        gsap.to(underline, {
-          scaleX: 0,
-          duration: 0.45,
-          ease: "power2.out"
-        });
+    }
+    const product = $('.bonsai-right-stage', hero);
+    if (product) {
+      gsap.to(product, {
+        yPercent: -9, ease: 'none',
+        scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: .9 }
       });
     }
-  });
-}
-
-// 3. 3D Milk Droplet Cart Mouse Parallax
-function initCartDropletParallax() {
-  const cartButton = document.querySelector(".header-cart-droplet");
-  if (!cartButton) return;
-
-  const droplet = cartButton.querySelector(".droplet-3d");
-  if (!droplet) return;
-
-  cartButton.addEventListener("mousemove", (e) => {
-    const rect = cartButton.getBoundingClientRect();
-    // Calculate relative cursor position from the center of the cart button
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-
-    // Translate the droplet by a fraction of the delta (max translation: 3px)
-    gsap.to(droplet, {
-      x: x * 0.15,
-      y: y * 0.15,
-      scale: 1.05,
-      duration: 0.3,
-      ease: "power2.out"
-    });
-
-    // Translate button container slightly for complete parallax feedback
-    gsap.to(cartButton, {
-      x: x * 0.08,
-      y: y * 0.08,
-      duration: 0.3,
-      ease: "power2.out"
-    });
-  });
-
-  cartButton.addEventListener("mouseleave", () => {
-    // Spring/Elastic recovery
-    gsap.to(droplet, {
-      x: 0,
-      y: 0,
-      scale: 1,
-      duration: 0.8,
-      ease: "elastic.out(1.2, 0.4)"
-    });
-
-    gsap.to(cartButton, {
-      x: 0,
-      y: 0,
-      duration: 0.6,
-      ease: "power2.out"
-    });
-  });
-}
-
-// 4. Sticky Scroll Header Transition (Ampul / Bonsai style)
-function initStickyHeader() {
-  const header = document.querySelector(".header-section");
-  if (!header) return;
-
-  const onScroll = () => {
-    if (window.scrollY > 30) {
-      header.classList.add("header-scrolled");
-    } else {
-      header.classList.remove("header-scrolled");
+    const copy = $('.bonsai-left-content', hero);
+    if (copy) {
+      gsap.to(copy, {
+        yPercent: 7, ease: 'none',
+        scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: .8 }
+      });
     }
-  };
-
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-}
-
-// 5. ScrollTrigger Parallax System for Hero layers
-function initHeroParallax() {
-  const heroSection = document.getElementById("hero");
-  if (!heroSection || typeof ScrollTrigger === 'undefined') return;
-
-  // Respect prefers-reduced-motion
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    return;
   }
 
-  // Product cutout moves slightly slower than scroll
-  if (document.querySelector(".bonsai-product-container")) {
-    gsap.to(".bonsai-product-container", {
-      yPercent: -12,
-      ease: "none",
-      scrollTrigger: {
-        trigger: heroSection,
-        start: "top top",
-        end: "bottom top",
-        scrub: 0.6
-      }
+  function initPageTransitions() {
+    if (reduced.matches || typeof gsap === 'undefined' || $('.kb-page-transition')) return;
+    const wipe = document.createElement('div');
+    wipe.className = 'kb-page-transition';
+    wipe.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(wipe);
+    const reset = () => gsap.set(wipe, { opacity: 0, pointerEvents: 'none' });
+    reset();
+    window.addEventListener('pageshow', reset);
+
+    document.addEventListener('click', e => {
+      const a = e.target.closest('a');
+      if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || a.target === '_blank' || a.hasAttribute('download')) return;
+      let url;
+      try { url = new URL(a.href, location.href); } catch { return; }
+      if (url.origin !== location.origin || url.pathname === location.pathname || url.hash || a.closest('.w-commerce-commercecartwrapper')) return;
+      e.preventDefault();
+      gsap.set(wipe, { pointerEvents: 'auto' });
+      gsap.to(wipe, { opacity: 1, duration: .18, ease: 'power1.out', onComplete: () => location.assign(url.href) });
+      setTimeout(reset, 1600);
     });
   }
-
-  // Architectural 01 moves at another depth
-  if (document.querySelector(".bonsai-numeral-01")) {
-    gsap.to(".bonsai-numeral-01", {
-      yPercent: 18,
-      ease: "none",
-      scrollTrigger: {
-        trigger: heroSection,
-        start: "top top",
-        end: "bottom top",
-        scrub: 0.8
-      }
-    });
-  }
-
-  // Architectural band moves subtly
-  if (document.querySelector(".bonsai-architectural-band")) {
-    gsap.to(".bonsai-architectural-band", {
-      yPercent: 8,
-      ease: "none",
-      scrollTrigger: {
-        trigger: heroSection,
-        start: "top top",
-        end: "bottom top",
-        scrub: 0.8
-      }
-    });
-  }
-
-  // Left editorial content moves slightly slower
-  if (document.querySelector(".bonsai-left-content")) {
-    gsap.to(".bonsai-left-content", {
-      yPercent: 8,
-      ease: "none",
-      scrollTrigger: {
-        trigger: heroSection,
-        start: "top top",
-        end: "bottom top",
-        scrub: 0.6
-      }
-    });
-  }
-}
+})();
