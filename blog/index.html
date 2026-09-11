@@ -1,195 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" id="top">
 <head>
-  <meta charset="utf-8"/>
-  <title>Dairy Journal & Insights | VC Organic Farms</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link href="../css/ampul.webflow.shared.aefc512af.css" rel="stylesheet" type="text/css"/>
-<link href="../css/brand-kit.css?v=2.00" rel="stylesheet" type="text/css"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="../js/animations.js?v=2.00"></script>
-  <style>
-    .w-webflow-badge { display: none !important; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>The Dairy &amp; Wellness Journal | VC Organic Farms</title>
+  <meta name="description" content="Read articles on A2 milk benefits, Vedic Bilona ghee preparation, Ahimsa dairy ethics, and nutritional wellness from VC Organic Farms.">
+  <link rel="icon" href="../img/logo icon.png" type="image/png">
+  <link rel="stylesheet" href="../fonts.css">
+  <link rel="stylesheet" href="../design.css">
+  <script defer src="../assets/vendor/gsap.min.js"></script>
+  <script defer src="../assets/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="../assets/vendor/lenis.min.js"></script>
+  <script defer src="../design.js"></script>
 </head>
-<body style="background-color: #fbf9f6; font-family: 'DM Sans', sans-serif;">
-  <div class="page-wrapper">
-    <!-- Header Block (Copied from template index) -->
-    <div class="header-milk-wave">
-  <svg viewBox="0 0 1440 140" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width: 100%; height: 100%; display: block;">
-    <path d="M0,0 Q180,95 360,65 T720,85 T1080,55 T1440,75 L1440,0 L0,0 Z" fill="#FFFFFF"/>
-    <path d="M0,0 Q180,80 360,50 T720,70 T1080,40 T1440,60 L1440,0 L0,0 Z" fill="rgba(250, 248, 244, 0.7)"/>
-  </svg>
-</div>
-<div class="header-section w-nav" style="background-color: rgba(220, 230, 232, 0.45); backdrop-filter: blur(16px); position: fixed; width: 100%; z-index: 1000; top: 0;">
-      <div class="container-default _1880 w-container">
-        <div class="header-block" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0;">
-          <a href="../index.html" class="header-brand w-inline-block" style="display: flex; align-items: center; text-decoration: none; gap: 10px;">
-            <img src="../img/logo icon.png" loading="eager" alt="" class="header-brand-logo" style="height: 40px;"/>
-            <div class="brand-text-block" style="display: flex; flex-direction: column; line-height: 1;">
-              <span class="brand-text-title" style="font-weight: 700; color: #3C1B0A; font-size: 16px;">VC ORGANIC</span>
-              <span class="brand-text-subtitle" style="font-size: 10px; letter-spacing: 2px; color: #8C6F5E;">FARMS</span>
-            </div>
-          </a>
-          <div class="header-menu">
-            <nav role="navigation" class="header-menu-block w-nav-menu" style="display: flex; gap: 20px;">
-              <a href="../index.html" class="nav-link w-nav-link" style="color: #3C1B0A; text-decoration: none; font-weight: 500;">Home</a>
-              <a href="../about/index.html" class="nav-link w-nav-link" style="color: #3C1B0A; text-decoration: none; font-weight: 500;">About</a>
-              <a href="../products/index.html" class="nav-link w-nav-link" style="color: #3C1B0A; text-decoration: none; font-weight: 500;">Products</a>
-              <a href="../blog/index.html" class="nav-link w-nav-link active" style="color: #3C1B0A; text-decoration: none; font-weight: 700;">Blog</a>
-            </nav>
+<body class="inner-page">
+  <a class="skip" href="#content">Skip to content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="menu-label">Menu</span>
+    </button>
+    <a class="brand" href="../index.html" aria-label="VC Organic Farms home">
+      <strong>VC Organic</strong>
+      <small>FARMS &amp; DAIRY</small>
+    </a>
+    <a class="nav-cta" href="../index.html#subscription">
+      Order Fresh Dairy <span aria-hidden="true">↗</span>
+    </a>
+    <nav id="mobile-menu" aria-label="Site navigation" hidden>
+      <a href="../index.html">Home</a>
+      <a href="../products/index.html">Fresh Dairy Products</a>
+      <a href="../index.html#subscription">Daily Subscription</a>
+      <a href="../index.html#tradition">Our Heritage &amp; Ahimsa</a>
+      <a href="../index.html#gallery">Farm Gallery</a>
+      <a href="../index.html#routes">Delivery Routes</a>
+      <a href="../blog/index.html">Dairy Journal</a>
+      <a href="../about/index.html">About VC Organics</a>
+      <a href="../contact/index.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="page-intro wrap">
+      <span class="eyebrow"><span aria-hidden="true">✳</span> The Dairy &amp; Wellness Journal <span aria-hidden="true">✳</span></span>
+      <h1>Good food.<br><em>Better health.</em></h1>
+      <p>Vedic wisdom and modern nutritional science from our dairy specialists and farmers.</p>
+    </section>
+
+    <section class="section wrap">
+      <div class="journal-grid">
+        <article class="journal-card" data-reveal>
+          <div class="journal-image">
+            <img src="../assets/kerala/fort-kochi.webp" alt="Why A2 Beta-Casein is naturally gentle on digestion" loading="lazy" decoding="async">
           </div>
-        </div>
-      </div>
-    </div>
+          <span class="article-category">Dairy Science</span>
+          <h3>Why A2 Beta-Casein is naturally gentle on digestion</h3>
+          <span class="text-link">Explore research ↗</span>
+        </article>
 
-    <!-- main wrapper -->
-    <div class="main-wrapper">
-      
-      <!-- Vintage Editorial Hero Banner -->
-      <section class="blog-cream-hero">
-        <div class="w-layout-blockcontainer container-default _1880 w-container" style="padding-top: 50px;">
-          <div class="blog-hero-grid">
-            <div class="blog-hero-text">
-              <h1 class="blog-hero-title">Уникальный вкус</h1>
-              <p class="blog-hero-subtitle">
-                Discover the pure traditions of organic dairy farming. From our pasture-fed Gir cows to Vedic Bilona butter-churning practices, read the science, research, and stories behind absolute dairy wellness.
-              </p>
-            </div>
-            <div class="blog-hero-image-wrap">
-              <img src="../img/dairy_farm_bg.png" alt="Cow Grazing Pastures"/>
-            </div>
+        <article class="journal-card" data-reveal>
+          <div class="journal-image">
+            <img src="../assets/kerala/munnar.webp" alt="The Sacred Vedic Bilona Method" loading="lazy" decoding="async">
           </div>
-        </div>
-      </section>
+          <span class="article-category">Traditional Craft</span>
+          <h3>The Sacred Vedic Bilona Method: Why copper and firewood matter</h3>
+          <span class="text-link">Explore craft ↗</span>
+        </article>
 
-      <!-- Dynamic Grid List -->
-      <section class="global-section">
-        <div class="w-layout-blockcontainer container-default _1880 w-container" style="margin-top: 50px;">
-          <h2 style="font-family: 'Cinzel', serif; color: #3C1B0A; text-align: center; font-size: 32px; font-weight: 800;">Встречайте обновленную продукцию</h2>
-          
-          <div id="dynamic-blog-grid" class="custom-blog-grid">
-            <!-- Dynamic Dairy Cards Injected via script -->
+        <article class="journal-card" data-reveal>
+          <div class="journal-image">
+            <img src="../assets/kerala/athirappilly.webp" alt="Ahimsa dairy farming" loading="lazy" decoding="async">
           </div>
-        </div>
-      </section>
+          <span class="article-category">Farm Ethics</span>
+          <h3>Calf-first ethics: How Ahimsa dairy changes everything</h3>
+          <span class="text-link">Explore ethics ↗</span>
+        </article>
 
-      <!-- Our Story Section ("Наша история") -->
-      <section class="global-section">
-        <div class="w-layout-blockcontainer container-default _1880 w-container">
-          <div class="blog-story-block">
-            <!-- Leaf asset overlay styled in sepia tones -->
-            <img src="../img/leaf.png" alt="" class="blog-story-decor"/>
-            
-            <div class="blog-story-content">
-              <div class="blog-story-left">
-                <h3 class="blog-story-header">Наша история</h3>
-              </div>
-              <div class="blog-story-columns">
-                <div>
-                  Our organic journey began with a simple promise—to deliver unadulterated milk products directly from ethical farms to your kitchen. By preserving traditional, natural farming techniques, we prioritize the health and happiness of our cattle, giving them a stress-free life grazing under warm sunny skies.
-                </div>
-                <div>
-                  Every batch of milk, ghee, and paneer we produce is rigorously checked for cold-chain safety. We do not use hormones, chemical feeds, or processing agents. This keeps the taste rich, thick, and premium, just as nature intended for generations.
-                </div>
-              </div>
-            </div>
+        <article class="journal-card" data-reveal>
+          <div class="journal-image">
+            <img src="../assets/kerala/vaikom-31.jpg" alt="Raw milk vs pasteurized milk" loading="lazy" decoding="async">
           </div>
-        </div>
-      </section>
+          <span class="article-category">Nutrition Guide</span>
+          <h3>Raw Milk vs Commercial Processing: Enzymes and bio-availability</h3>
+          <span class="text-link">Explore nutrition ↗</span>
+        </article>
 
-      <!-- Diagram Infographic -->
-      <section class="global-section">
-        <div class="w-layout-blockcontainer container-default _1880 w-container">
-          <div class="blog-diagram-section">
-            <h3 class="blog-diagram-title">The Anatomy of Pure A2 Milk</h3>
-            
-            <div class="blog-diagram-wrap">
-              <!-- Left Column Benefits -->
-              <div class="blog-diagram-col">
-                <div class="blog-benefit-card">
-                  <h4 class="blog-benefit-title">Rich in Vitamin B12</h4>
-                  <p class="blog-benefit-desc">Essential for natural energy synthesis, cell metabolism, and cognitive vitality.</p>
-                </div>
-                <div class="blog-benefit-card">
-                  <h4 class="blog-benefit-title">Stronger Bones</h4>
-                  <p class="blog-benefit-desc">Abundant natural calcium and phosphorus to support dense skeletal health.</p>
-                </div>
-              </div>
-
-              <!-- Center Bottle Image -->
-              <div class="blog-diagram-center">
-                <img src="../img/milk_bottle_mockup.png" alt="Glass Milk Bottle Mockup"/>
-              </div>
-
-              <!-- Right Column Benefits -->
-              <div class="blog-diagram-col">
-                <div class="blog-benefit-card">
-                  <h4 class="blog-benefit-title">Immune Defence</h4>
-                  <p class="blog-benefit-desc">Packed with vital immunoglobulins and easily absorbed A2 proteins.</p>
-                </div>
-                <div class="blog-benefit-card">
-                  <h4 class="blog-benefit-title">Active Vitamin D</h4>
-                  <p class="blog-benefit-desc">Enhances gut calcium absorption and maintains robust muscle tone.</p>
-                </div>
-                <div class="blog-benefit-card" style="grid-column: span 2; max-width: 100%;">
-                  <h4 class="blog-benefit-title">Omega-3 Healthy Fats</h4>
-                  <p class="blog-benefit-desc">Ideal ratio of fatty acids for natural heart and brain protection.</p>
-                </div>
-              </div>
-            </div>
+        <article class="journal-card" data-reveal>
+          <div class="journal-image">
+            <img src="../assets/kerala/coir.jpg" alt="Cold pressed oils benefits" loading="lazy" decoding="async">
           </div>
-        </div>
-      </section>
+          <span class="article-category">Cold Press Oils</span>
+          <h3>Lakdi Ghana extraction: Keeping healthy fatty acids intact</h3>
+          <span class="text-link">Explore oils ↗</span>
+        </article>
 
-    </div>
-
-    <!-- Footer Block -->
-    <section class="footer-section" style="background-color: #0c2b1c; color: #ccd5ce; padding: 40px 0; text-align: center; font-size: 14px;">
-      <div class="w-layout-blockcontainer container-default w-container">
-        <p>© 2026 VC Organic Farms. All rights reserved. Pure farm dairy delivered cold to your home.</p>
+        <article class="journal-card" data-reveal>
+          <div class="journal-image">
+            <img src="../assets/kerala/sadya.webp" alt="Traditional fermented probiotics" loading="lazy" decoding="async">
+          </div>
+          <span class="article-category">Probiotic Health</span>
+          <h3>Clay-set curd and churned chaas for daily gut micro-biome balance</h3>
+          <span class="text-link">Explore probiotics ↗</span>
+        </article>
       </div>
     </section>
-  </div>
+  </main>
 
-  <script src="../js/blog-data.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const gridContainer = document.getElementById('dynamic-blog-grid');
-      gridContainer.innerHTML = '';
+  <!-- Closing Section -->
+  <section class="closing">
+    <video class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="../assets/video/closing-poster.jpg" aria-label="Farm sunset pasturing" data-ambient>
+      <source src="../assets/video/closing-sunset.mp4" type="video/mp4">
+    </video>
+    <button class="video-toggle" aria-label="Pause background video" aria-pressed="false">Ⅱ <span>Pause film</span></button>
+    <div class="closing-content" data-reveal>
+      <span class="eyebrow"><span aria-hidden="true">✳</span> Pure Taste. Authentic Wellness. <span aria-hidden="true">✳</span></span>
+      <h2>Come for the purity.<br>Stay for the <em>feeling.</em></h2>
+      <a class="button light" href="../products/index.html">Explore our farm catalog <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
 
-      BLOG_POSTS.forEach(post => {
-        const cardHtml = `
-          <a href="./post/index.html?id=${post.id}" class="custom-blog-card">
-            <div class="custom-blog-img-box">
-              <img src="../img/${post.image}" alt="${post.title}"/>
-            </div>
-            <div class="custom-blog-card-content">
-              <div class="custom-blog-card-meta">${post.date} • ${post.readTime}</div>
-              <h3 class="custom-blog-card-title">${post.title}</h3>
-              <p class="custom-blog-card-summary">${post.summary}</p>
-              <div style="margin-top: auto; color: #3C1B0A; font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 4px;">
-                Read Article →
-              </div>
-            </div>
-          </a>
-        `;
-        gridContainer.insertAdjacentHTML('beforeend', cardHtml);
-      });
-
-      // Remove Webflow badge dynamically
-      function removeWebflow() {
-        var badges = document.querySelectorAll('.w-webflow-badge');
-        badges.forEach(function(b) {
-          b.remove();
-        });
-      }
-      removeWebflow();
-      window.addEventListener('load', removeWebflow);
-      setTimeout(removeWebflow, 500);
-      setTimeout(removeWebflow, 1500);
-    });
-  </script>
+  <!-- Footer -->
+  <footer class="footer wrap">
+    <div class="footer-top">
+      <a class="brand" href="../index.html">
+        <strong>VC Organic</strong>
+        <small>FARMS &amp; DAIRY</small>
+      </a>
+      <p>Pure raw A2 milk. Hand-churned Bilona ghee.<br>Delivered fresh from our farm to your table.</p>
+      <div>
+        <a href="tel:+919947478328">+91 99474 78328 ↗</a>
+        <a href="mailto:care@vcorganicfarms.com">care@vcorganicfarms.com ↗</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="../about/index.html">Our story</a>
+      <a href="../products/index.html">Fresh Dairy</a>
+      <a href="../index.html#subscription">Daily Subscription</a>
+      <a href="../index.html#gallery">Farm Gallery</a>
+      <a href="../index.html#routes">Delivery Routes</a>
+      <a href="../blog/index.html">Dairy Journal</a>
+      <a href="../contact/index.html">Contact Us</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VC Organic Farms · Karnataka, India</span>
+      <a class="site-credit" href="https://vcorganicfarms.com" target="_blank" rel="noopener">Farm to Table Purity ↗</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
 </body>
 </html>
