@@ -28,54 +28,19 @@ window.addEventListener('load', () => {
 
 // 1. Staggered Page Load Entrance Animation
 function initHeaderEntrance() {
-  // Position navbar ready for slide down
-  gsap.set(".header-section", { y: -100, opacity: 0 });
-
-  gsap.to(".header-section", {
-    y: 0,
-    opacity: 1,
-    duration: 1.2,
-    ease: "power4.out",
-    delay: 0.1
-  });
-
-  // Stagger navigation items
-  if (document.querySelectorAll(".header-nav-wrap a.nav-link").length > 0) {
-    gsap.fromTo(".header-nav-wrap a.nav-link",
-      { opacity: 0, y: -15 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        stagger: 0.08,
-        ease: "power3.out",
-        delay: 0.4
-      }
-    );
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
   }
 
-  // Fade in brand logo
-  gsap.fromTo(".header-brand",
-    { scale: 0.92, opacity: 0 },
+  // Smooth clean slide-in of the header container
+  gsap.fromTo(".header-section", 
+    { y: -20, opacity: 0 },
     {
-      scale: 1,
+      y: 0,
       opacity: 1,
-      duration: 1,
-      ease: "power2.out",
-      delay: 0.3
-    }
-  );
-  
-  // Fade in right buttons
-  gsap.fromTo(".header-button-block > *",
-    { scale: 0.8, opacity: 0 },
-    {
-      scale: 1,
-      opacity: 1,
-      duration: 0.8,
-      stagger: 0.05,
-      ease: "back.out(1.7)",
-      delay: 0.6
+      duration: 0.9,
+      ease: "power3.out",
+      delay: 0.1
     }
   );
 }
@@ -172,47 +137,21 @@ function initCartDropletParallax() {
   });
 }
 
-// 4. Sticky Scroll Header Shrink
+// 4. Sticky Scroll Header Transition (Ampul / Bonsai style)
 function initStickyHeader() {
-  if (typeof ScrollTrigger === 'undefined') return;
+  const header = document.querySelector(".header-section");
+  if (!header) return;
 
-  // Header shrink from 82px -> 70px, background becomes more solid
-  gsap.to(".header-section", {
-    height: "48px",
-    backgroundColor: "rgba(255, 255, 255, 0.94)",
-    borderColor: "rgba(22, 61, 43, 0.1)",
-    boxShadow: "0 8px 32px rgba(22, 61, 43, 0.08)",
-    scrollTrigger: {
-      trigger: "body",
-      start: "top -30px",
-      end: "top -120px",
-      scrub: 0.5,
-      invalidateOnRefresh: true
+  const onScroll = () => {
+    if (window.scrollY > 30) {
+      header.classList.add("header-scrolled");
+    } else {
+      header.classList.remove("header-scrolled");
     }
-  });
+  };
 
-  // Scale down the logo size slightly on scroll
-  gsap.to(".header-brand-logo", {
-    scale: 0.9,
-    scrollTrigger: {
-      trigger: "body",
-      start: "top -30px",
-      end: "top -120px",
-      scrub: 0.5
-    }
-  });
-  
-  // Fade out milk wave slightly as you scroll down
-  gsap.to(".header-milk-wave", {
-    opacity: 0.6,
-    y: -10,
-    scrollTrigger: {
-      trigger: "body",
-      start: "top -20px",
-      end: "top -150px",
-      scrub: 0.5
-    }
-  });
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 }
 
 // 5. ScrollTrigger Parallax System for Hero layers
@@ -220,87 +159,63 @@ function initHeroParallax() {
   const heroSection = document.getElementById("hero");
   if (!heroSection || typeof ScrollTrigger === 'undefined') return;
 
-  // Background Stage (Speed 0.15)
-  if (document.querySelector(".bonsai-parallax-stage")) {
-    gsap.to(".bonsai-parallax-stage", {
-      yPercent: 12,
+  // Respect prefers-reduced-motion
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  // Product cutout moves slightly slower than scroll
+  if (document.querySelector(".bonsai-product-container")) {
+    gsap.to(".bonsai-product-container", {
+      yPercent: -12,
       ease: "none",
       scrollTrigger: {
         trigger: heroSection,
         start: "top top",
         end: "bottom top",
-        scrub: true
+        scrub: 0.6
       }
     });
   }
 
-  // Product image parallax - moves up slower than scroll
-  if (document.querySelector(".bonsai-parallax-image")) {
-    gsap.to(".bonsai-parallax-image", {
-      yPercent: -18,
+  // Architectural 01 moves at another depth
+  if (document.querySelector(".bonsai-numeral-01")) {
+    gsap.to(".bonsai-numeral-01", {
+      yPercent: 18,
       ease: "none",
       scrollTrigger: {
         trigger: heroSection,
         start: "top top",
         end: "bottom top",
-        scrub: true
+        scrub: 0.8
       }
     });
   }
 
-  // Hero text contents parallax offset (content moves slower)
+  // Architectural band moves subtly
+  if (document.querySelector(".bonsai-architectural-band")) {
+    gsap.to(".bonsai-architectural-band", {
+      yPercent: 8,
+      ease: "none",
+      scrollTrigger: {
+        trigger: heroSection,
+        start: "top top",
+        end: "bottom top",
+        scrub: 0.8
+      }
+    });
+  }
+
+  // Left editorial content moves slightly slower
   if (document.querySelector(".bonsai-left-content")) {
     gsap.to(".bonsai-left-content", {
-      yPercent: 10,
+      yPercent: 8,
       ease: "none",
       scrollTrigger: {
         trigger: heroSection,
         start: "top top",
         end: "bottom top",
-        scrub: true
-      }
-    });
-  }
-
-  // Geometric frame parallax (moves slightly)
-  if (document.querySelector(".bonsai-geo-frame")) {
-    gsap.to(".bonsai-geo-frame", {
-      yPercent: 25,
-      ease: "none",
-      scrollTrigger: {
-        trigger: heroSection,
-        start: "top top",
-        end: "bottom top",
-        scrub: true
-      }
-    });
-  }
-
-  // Product labels fade and move
-  if (document.querySelector(".bonsai-product-labels")) {
-    gsap.to(".bonsai-product-labels", {
-      yPercent: -10,
-      opacity: 0.4,
-      ease: "none",
-      scrollTrigger: {
-        trigger: heroSection,
-        start: "top top",
-        end: "bottom top",
-        scrub: true
-      }
-    });
-  }
-
-  // Vertical text parallax
-  if (document.querySelector(".bonsai-vertical-text-wrap")) {
-    gsap.to(".bonsai-vertical-text-wrap", {
-      yPercent: 30,
-      ease: "none",
-      scrollTrigger: {
-        trigger: heroSection,
-        start: "top top",
-        end: "bottom top",
-        scrub: true
+        scrub: 0.6
       }
     });
   }

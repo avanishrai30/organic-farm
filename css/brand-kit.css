@@ -136,176 +136,131 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
   color: var(--color-text-muted) !important;
 }
 
-/* Bonsai-Style Editorial Hero Layout */
+/* =========================================================
+   BONSAI-STYLE EDITORIAL HERO LAYOUT (REFERENCE ACCURATE)
+   ========================================================= */
+
+.header-milk-wave {
+  display: none !important;
+}
+
 .bonsai-hero {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  padding: 120px 6% 80px 6%;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.bonsai-vertical-text-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-.bonsai-vertical-text {
-  font-family: var(--font-body);
-  font-weight: 300;
-  font-size: 38px;
-  letter-spacing: 0.22em;
-  color: #1a1a1a;
-  text-transform: lowercase;
-  opacity: 0.08;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  white-space: nowrap;
-  user-select: none;
-  pointer-events: none;
-}
-
-.bonsai-geo-frame {
-  position: absolute;
-  left: 5%;
-  bottom: 8%;
-  width: 160px;
-  height: 160px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.bonsai-geo-frame .geo-filled {
-  position: absolute;
-  left: 30px;
-  bottom: 0;
-  width: 80px;
-  height: 50px;
-  background-color: #0F3A20; /* Brand forest green */
-}
-
-.bonsai-geo-frame .geo-outline-1 {
-  position: absolute;
-  left: 70px;
-  bottom: 25px;
-  width: 60px;
-  height: 50px;
-  border: 1px solid #1a1a1a;
-}
-
-.bonsai-geo-frame .geo-outline-2 {
-  position: absolute;
-  left: -10px;
-  bottom: -10px;
-  width: 140px;
-  height: 100px;
-  border-left: 1.5px solid #1a1a1a;
-  border-bottom: 1.5px solid #1a1a1a;
-}
-
-.bonsai-scroll-indicator {
-  position: absolute;
-  left: 7%;
-  bottom: 8.5%;
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 50px;
-  pointer-events: none;
-}
-
-.bonsai-scroll-indicator .scroll-text {
-  font-family: var(--font-body);
-  font-size: 9px;
-  font-weight: 400;
-  letter-spacing: 0.2em;
-  color: #ffffff;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
+  position: relative !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #ffffff !important;
+  padding: 100px 6% 60px 6% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
 }
 
 .bonsai-content-wrapper {
-  display: grid;
-  grid-template-columns: 80px 1fr 1.15fr; /* 80px dedicated column for vertical text */
-  gap: 40px;
-  width: 100%;
-  max-width: 1400px;
-  align-items: center;
-  z-index: 3;
-  box-sizing: border-box;
+  display: grid !important;
+  grid-template-columns: 60px 1fr 1.25fr !important;
+  gap: 40px !important;
+  width: 100% !important;
+  max-width: 1440px !important;
+  align-items: center !important;
+  z-index: 3 !important;
+  position: relative !important;
+  box-sizing: border-box !important;
 }
 
+/* Narrow Left Vertical Word: organic */
+.bonsai-vertical-text-wrap {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 60px !important;
+  height: 100% !important;
+}
+
+.bonsai-vertical-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 42px !important;
+  letter-spacing: 0.24em !important;
+  color: #1a1a1a !important;
+  text-transform: lowercase !important;
+  opacity: 0.18 !important;
+  writing-mode: vertical-rl !important;
+  transform: rotate(180deg) !important;
+  user-select: none !important;
+  pointer-events: none !important;
+  white-space: nowrap !important;
+}
+
+/* Left-Middle Editorial Content */
 .bonsai-left-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 0% !important; /* Reset padding since grid column handles placement */
-  box-sizing: border-box;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  padding-left: 10px !important;
+  z-index: 5 !important;
+  box-sizing: border-box !important;
 }
 
 .bonsai-heading-group {
-  margin-bottom: 28px;
-  width: 100%;
+  margin-bottom: 24px !important;
+  width: 100% !important;
 }
 
 .bonsai-h1 {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
   margin: 0 !important;
-  font-family: var(--font-body) !important;
-  color: #1a1a1a !important;
-  font-weight: 300 !important;
+  padding: 0 !important;
 }
 
 .bonsai-h1-large {
-  font-size: clamp(48px, 5.5vw, 76px) !important;
-  letter-spacing: 0.12em !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: clamp(48px, 5.8vw, 76px) !important;
+  font-weight: 200 !important;
+  letter-spacing: 0.14em !important;
   line-height: 0.95 !important;
-  font-weight: 300 !important;
+  color: #1a1a1a !important;
+  text-transform: uppercase !important;
 }
 
 .bonsai-h1-line {
-  display: inline-block;
-  width: 180px;
-  height: 1.5px;
-  background-color: #1a1a1a;
-  margin: 20px 0 10px 60px;
+  display: inline-block !important;
+  width: 150px !important;
+  height: 1.5px !important;
+  background-color: #1a1a1a !important;
+  margin: 22px 0 14px 60px !important;
+  transform-origin: left center !important;
 }
 
 .bonsai-h1-sub {
-  font-size: clamp(18px, 2vw, 26px) !important;
-  letter-spacing: 0.22em !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: clamp(18px, 2.2vw, 26px) !important;
   font-weight: 300 !important;
-  margin-left: 110px;
+  letter-spacing: 0.22em !important;
+  color: #1a1a1a !important;
+  text-transform: uppercase !important;
+  margin-left: 110px !important;
 }
 
 .bonsai-desc {
-  font-family: var(--font-body) !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
   font-size: 13.5px !important;
   font-weight: 300 !important;
-  color: #727d78 !important;
+  color: #626d68 !important;
   line-height: 1.85 !important;
-  max-width: 340px;
-  margin: 0 0 36px 60px !important;
+  max-width: 360px !important;
+  margin: 0 0 34px 110px !important;
 }
 
 .bonsai-explore-btn {
-  background-color: #1a1a1a !important;
+  background-color: #111111 !important;
   color: #ffffff !important;
   border: none !important;
-  padding: 12px 28px !important;
-  font-family: var(--font-body) !important;
+  border-radius: 0 !important; /* Sharp rectangle, NOT pill-shaped */
+  padding: 13px 32px !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
   font-size: 11px !important;
   font-weight: 500 !important;
   letter-spacing: 0.22em !important;
@@ -313,162 +268,294 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
   cursor: pointer !important;
   display: inline-flex !important;
   align-items: center !important;
-  gap: 8px !important;
-  margin-left: 60px !important;
-  border-radius: 0 !important;
-  transition: background-color 0.3s ease !important;
+  gap: 10px !important;
+  margin-left: 110px !important;
+  box-shadow: none !important;
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s ease !important;
 }
 
 .bonsai-explore-btn:hover {
   background-color: #0F3A20 !important;
 }
 
+/* Right Product Composition Stage */
 .bonsai-right-stage {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding-bottom: 40px;
-}
-
-.bonsai-stage-bg {
-  display: none !important;
-}
-
-.bonsai-product-container {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-}
-
-.bonsai-number-watermark {
-  position: absolute;
-  right: -5%;
-  bottom: 12%;
-  font-size: clamp(140px, 14vw, 240px);
-  font-family: var(--font-body);
-  font-weight: 300;
-  color: #ffffff;
-  z-index: 2;
-  user-select: none;
-  pointer-events: none;
-  line-height: 1;
-}
-
-.bonsai-product-img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  z-index: 3;
-  filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.08));
-}
-
-.bonsai-product-img-single {
-  width: 100% !important;
-  height: auto !important;
-  max-height: 560px !important;
-  object-fit: cover !important;
   position: relative !important;
-  z-index: 20 !important;
-  border-radius: 20px !important;
-  box-shadow: 0 20px 60px rgba(22, 61, 43, 0.12) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 520px !important;
 }
 
-.bonsai-orbit-ring {
-  position: absolute;
-  bottom: 0%;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 2;
-  pointer-events: none;
-  opacity: 0.8;
+/* Pale grey-green horizontal architectural band behind product */
+.bonsai-architectural-band {
+  position: absolute !important;
+  right: -10vw !important;
+  top: 42% !important;
+  transform: translateY(-50%) !important;
+  width: 85% !important;
+  height: 130px !important;
+  background-color: #e2e8e8 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
 }
 
-.bonsai-orbit-ring svg {
-  width: 100%;
-  height: auto;
+/* Oversized white 01 architectural numeral */
+.bonsai-numeral-01 {
+  position: absolute !important;
+  right: 6% !important;
+  top: 42% !important;
+  transform: translateY(-50%) !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(140px, 16vw, 220px) !important;
+  font-weight: 300 !important;
+  color: #ffffff !important;
+  line-height: 1 !important;
+  letter-spacing: -0.04em !important;
+  z-index: 2 !important;
+  user-select: none !important;
+  pointer-events: none !important;
 }
 
-.bonsai-slider-dot {
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 4;
+/* Product Cutout Sits Directly on Canvas */
+.bonsai-product-container {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 520px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 5 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border: none !important;
 }
 
-.bonsai-slider-dot .dot-circle {
-  width: 16px;
-  height: 16px;
-  border: 1.5px solid #1a1a1a;
-  background-color: #ffffff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 8px;
-  font-weight: 700;
-  color: #1a1a1a;
+.bonsai-product-cutout {
+  width: 100% !important;
+  max-height: 480px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  position: relative !important;
+  z-index: 5 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+/* Subtle Elliptical Orbit Line at base of product */
+.bonsai-orbit-ellipse {
+  position: absolute !important;
+  bottom: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 105% !important;
+  max-width: 530px !important;
+  height: auto !important;
+  z-index: 3 !important;
+  pointer-events: none !important;
+  opacity: 0.9 !important;
+}
+
+/* Center Selector Indicator (- 0 -) */
+.bonsai-selector-indicator {
+  position: absolute !important;
+  bottom: 10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  z-index: 6 !important;
+  pointer-events: none !important;
+}
+
+.bonsai-selector-indicator .selector-dash {
+  display: inline-block !important;
+  width: 10px !important;
+  height: 1px !important;
+  background-color: #1a1a1a !important;
+}
+
+.bonsai-selector-indicator .selector-dot {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: #1a1a1a !important;
+  background-color: #ffffff !important;
+  border: 1px solid #1a1a1a !important;
+  border-radius: 50% !important;
+  width: 16px !important;
+  height: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+/* Beneath Product Selector & Labels */
+.bonsai-product-labels-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  margin-top: 24px !important;
+  z-index: 6 !important;
+  position: relative !important;
+}
+
+.bonsai-nav-arrow {
+  background: transparent !important;
+  border: none !important;
+  color: #626d68 !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+  padding: 4px 8px !important;
+  transition: color 0.2s ease, transform 0.2s ease !important;
+  line-height: 1 !important;
+}
+
+.bonsai-nav-arrow:hover {
+  color: #0F3A20 !important;
+  transform: scale(1.15) !important;
 }
 
 .bonsai-product-labels {
-  position: relative;
-  margin-top: 32px;
-  display: flex;
-  gap: 36px;
-  z-index: 4;
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
 }
 
 .bonsai-label-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  font-size: 11px !important;
+  letter-spacing: 0.14em !important;
+  color: #727d78 !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: color 0.25s ease !important;
 }
 
-.bonsai-label-item .label-dot {
-  width: 6px;
-  height: 6px;
-  background-color: #1a1a1a;
-  border-radius: 50%;
+.bonsai-label-item .label-bullet {
+  font-size: 9px !important;
+  color: #1a1a1a !important;
 }
 
-.bonsai-label-item .label-text {
-  font-family: var(--font-body);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  color: #626d68;
-  text-transform: uppercase;
+.bonsai-label-item:hover,
+.bonsai-label-item.active {
+  color: #0F3A20 !important;
+  font-weight: 600 !important;
 }
 
-.bonsai-down-arrow {
-  position: absolute;
-  bottom: 4%;
-  right: 5%;
-  cursor: pointer;
-  color: #1a1a1a;
-  z-index: 5;
-  opacity: 0.6;
-  transition: opacity 0.2s ease;
+.bonsai-label-item.active .label-bullet {
+  color: #0F3A20 !important;
 }
 
-.bonsai-down-arrow:hover {
-  opacity: 1;
+/* Bottom-Left Geometric Composition */
+.bonsai-geo-frame {
+  position: absolute !important;
+  left: 5% !important;
+  bottom: 7% !important;
+  width: 150px !important;
+  height: 130px !important;
+  z-index: 4 !important;
+  pointer-events: none !important;
 }
 
-/* responsive Media Queries for Bonsai Hero */
-@media (max-width: 1400px) {
-  .bonsai-vertical-text {
-    display: none;
+.bonsai-geo-frame .geo-filled {
+  position: absolute !important;
+  left: 28px !important;
+  bottom: 0 !important;
+  width: 95px !important;
+  height: 46px !important;
+  background-color: #173829 !important; /* VC forest green */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  padding-right: 12px !important;
+  box-sizing: border-box !important;
+}
+
+.bonsai-geo-frame .geo-scroll-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 8px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.14em !important;
+  color: rgba(255, 255, 255, 0.72) !important;
+  writing-mode: vertical-rl !important;
+  transform: rotate(180deg) !important;
+  text-transform: lowercase !important;
+  line-height: 1 !important;
+}
+
+.bonsai-geo-frame .geo-outline-1 {
+  position: absolute !important;
+  left: 68px !important;
+  bottom: 22px !important;
+  width: 64px !important;
+  height: 48px !important;
+  border: 1px solid #1a1a1a !important;
+}
+
+.bonsai-geo-frame .geo-outline-2 {
+  position: absolute !important;
+  left: -8px !important;
+  bottom: -8px !important;
+  width: 130px !important;
+  height: 90px !important;
+  border-left: 1.5px solid #1a1a1a !important;
+  border-bottom: 1.5px solid #1a1a1a !important;
+}
+
+/* Bottom-Right Minimal Action */
+.bonsai-bottom-right-action {
+  position: absolute !important;
+  right: 5% !important;
+  bottom: 6% !important;
+  background: transparent !important;
+  border: none !important;
+  color: #1a1a1a !important;
+  cursor: pointer !important;
+  padding: 8px !important;
+  opacity: 0.65 !important;
+  transition: opacity 0.2s ease, transform 0.2s ease !important;
+  z-index: 5 !important;
+}
+
+.bonsai-bottom-right-action:hover {
+  opacity: 1 !important;
+  transform: translateY(2px) !important;
+}
+
+/* Responsive Media Queries for Bonsai Hero */
+@media (max-width: 1280px) {
+  .bonsai-h1-large {
+    font-size: 58px !important;
+  }
+  .bonsai-h1-sub {
+    font-size: 20px !important;
+    margin-left: 80px !important;
+  }
+  .bonsai-h1-line {
+    width: 120px !important;
+    margin-left: 40px !important;
+  }
+  .bonsai-desc {
+    margin-left: 80px !important;
+  }
+  .bonsai-explore-btn {
+    margin-left: 80px !important;
   }
 }
 
@@ -482,7 +569,7 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 0 !important;
+    gap: 36px !important;
   }
 
   .bonsai-vertical-text-wrap {
@@ -495,107 +582,168 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
     align-items: center !important;
     text-align: center !important;
     width: 100% !important;
-    margin-bottom: 40px !important;
+  }
+
+  .bonsai-heading-group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .bonsai-h1-large {
+    font-size: clamp(40px, 7vw, 56px) !important;
+  }
+
+  .bonsai-h1-line {
+    margin: 16px auto 12px auto !important;
+    width: 120px !important;
+  }
+
+  .bonsai-h1-sub {
+    margin-left: 0 !important;
+    font-size: clamp(16px, 3vw, 22px) !important;
+  }
+
+  .bonsai-desc {
+    margin: 0 auto 28px auto !important;
+    max-width: 440px !important;
+    text-align: center !important;
+  }
+
+  .bonsai-explore-btn {
+    margin-left: 0 !important;
   }
 
   .bonsai-right-stage {
     order: 2 !important;
     width: 100% !important;
-    max-width: 480px !important;
-    padding-bottom: 20px !important;
+    max-width: 500px !important;
+    min-height: 400px !important;
   }
 
-  .bonsai-h1-line {
-    display: block !important;
-    margin: 20px auto 10px auto !important;
+  .bonsai-architectural-band {
+    width: 100% !important;
+    right: -5vw !important;
+    height: 100px !important;
   }
 
-  .bonsai-h1-sub {
-    margin-left: 0 !important;
+  .bonsai-numeral-01 {
+    font-size: 130px !important;
+    right: 5% !important;
   }
 
-  .bonsai-desc {
-    margin: 0 auto 32px auto !important;
-    max-width: 380px !important;
-  }
-
-  .bonsai-explore-btn {
-    margin-left: 0 !important;
-    align-self: center !important;
-  }
-
-  .bonsai-geo-frame,
-  .bonsai-scroll-indicator,
-  .bonsai-logo-tag {
+  .bonsai-geo-frame {
     display: none !important;
   }
 
-  .bonsai-product-container {
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-
-  .bonsai-product-img-single {
-    max-height: none !important;
-    width: 100% !important;
-    height: auto !important;
-    border-radius: 20px !important;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.05) !important;
-  }
-
-  .bonsai-product-labels {
-    justify-content: center !important;
-  }
-
-  .bonsai-stage-bg {
+  .bonsai-bottom-right-action {
     display: none !important;
   }
 }
 
 @media (max-width: 767px) {
   .bonsai-hero {
-    padding: 110px 5% 50px 5% !important;
-  }
-
-  .bonsai-right-stage {
-    max-width: 400px !important;
-  }
-
-  .bonsai-h1-large {
-    font-size: 44px !important;
-  }
-
-  .bonsai-h1-sub {
-    font-size: 16px !important;
-  }
-
-  .bonsai-desc {
-    font-size: 13px !important;
-    max-width: 320px !important;
-  }
-}
-
-@media (max-width: 479px) {
-  .bonsai-hero {
-    padding: 100px 4% 40px 4% !important;
-  }
-
-  .bonsai-right-stage {
-    max-width: 100% !important;
+    padding: 100px 5% 50px 5% !important;
   }
 
   .bonsai-h1-large {
     font-size: 38px !important;
   }
 
-  .bonsai-product-labels {
-    flex-direction: column !important;
-    gap: 10px !important;
-    align-items: center !important;
+  .bonsai-h1-sub {
+    font-size: 15px !important;
   }
 
-  .bonsai-product-img-single {
-    border-radius: 16px !important;
+  .bonsai-desc {
+    font-size: 13px !important;
+    max-width: 320px !important;
+  }
+
+  .bonsai-product-labels-nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    margin-top: 18px !important;
+    width: 100% !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .bonsai-product-labels {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .bonsai-label-item {
+    font-size: 9px !important;
+    letter-spacing: 0.06em !important;
+    white-space: nowrap !important;
+    gap: 4px !important;
+  }
+
+  .bonsai-nav-arrow {
+    font-size: 14px !important;
+    flex-shrink: 0 !important;
+    padding: 2px 4px !important;
+  }
+
+  .bonsai-product-cutout {
+    max-height: 320px !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .bonsai-hero {
+    padding: 90px 4% 40px 4% !important;
+  }
+
+  .bonsai-h1-large {
+    font-size: 32px !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  .bonsai-h1-sub {
+    font-size: 13px !important;
+    letter-spacing: 0.16em !important;
+  }
+
+  .bonsai-desc {
+    font-size: 12px !important;
+    max-width: 290px !important;
+  }
+
+  .bonsai-product-cutout {
+    max-height: 290px !important;
+  }
+
+  .bonsai-product-labels-nav {
+    gap: 8px !important;
+    margin-top: 18px !important;
+    width: 100% !important;
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .bonsai-product-labels {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    justify-content: center !important;
+  }
+
+  .bonsai-label-item {
+    font-size: 8.5px !important;
+    letter-spacing: 0.06em !important;
+    white-space: nowrap !important;
+    gap: 3px !important;
+  }
+
+  .bonsai-nav-arrow {
+    font-size: 13px !important;
+    padding: 2px 4px !important;
   }
 }
 
@@ -637,28 +785,58 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
 
 .header-section {
   position: fixed !important;
-  top: 20px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: auto !important;
-  max-width: 90% !important;
-  background: rgba(255, 255, 255, 0.82) !important;
-  backdrop-filter: blur(24px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-  border-radius: 999px !important;
-  padding: 0 12px 0 20px !important;
-  border: 1px solid rgba(255, 255, 255, 0.5) !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 24px 6% !important;
+  box-shadow: none !important;
   z-index: 1000 !important;
-  height: 56px !important;
+  height: 80px !important;
   box-sizing: border-box !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, height 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease !important;
+  justify-content: space-between !important;
+  transition: top 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.35s ease, 
+              border-color 0.35s ease, 
+              box-shadow 0.35s ease, 
+              padding 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              height 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Scrolled State: Transitions smoothly into compact glass navigation */
+.header-section.header-scrolled {
+  top: 16px !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  max-width: 90% !important;
+  background: rgba(255, 255, 255, 0.86) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border-radius: 999px !important;
+  padding: 0 20px !important;
+  border: 1px solid rgba(15, 58, 32, 0.08) !important;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+  height: 52px !important;
 }
 
 .header-section.header-hidden {
+  transform: translateY(-100px) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.header-section.header-scrolled.header-hidden {
   transform: translate(-50%, -100px) !important;
   opacity: 0 !important;
   pointer-events: none !important;
@@ -666,7 +844,8 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
 
 .header-section .container-default {
   width: 100% !important;
-  max-width: 100% !important;
+  max-width: 1440px !important;
+  margin: 0 auto !important;
   padding: 0 !important;
   background: transparent !important;
   box-sizing: border-box !important;
@@ -687,7 +866,7 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
   height: 40px !important;
   display: flex !important;
   align-items: center !important;
-  gap: 8px !important;
+  gap: 10px !important;
   text-decoration: none !important;
   box-sizing: border-box !important;
   border: none !important;
@@ -701,7 +880,7 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
 }
 
 .header-section .header-brand-logo {
-  height: 24px !important;
+  height: 26px !important;
   width: auto !important;
   object-fit: contain !important;
   flex-shrink: 0 !important;
@@ -715,10 +894,10 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
 
 .header-section .brand-text-title {
   font-family: 'Inter', sans-serif !important;
-  font-size: 13px !important;
+  font-size: 13.5px !important;
   font-weight: 700 !important;
   color: #1a1a1a !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: 0.08em !important;
   margin: 0 !important;
 }
 
@@ -727,7 +906,7 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
   font-size: 8.5px !important;
   font-weight: 500 !important;
   color: #6b7b74 !important;
-  letter-spacing: 0.12em !important;
+  letter-spacing: 0.14em !important;
   margin: 0 !important;
 }
 
@@ -753,31 +932,31 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
   display: flex !important;
   align-items: center !important;
   height: 100% !important;
-  gap: 4px !important;
+  gap: 28px !important;
 }
 
-/* Nav links: Premium minimal text, hover underline */
+/* Nav links: Premium minimal text matching Bonsai reference */
 .header-section .header-nav-wrap > .nav-link,
 .header-section .header-nav-wrap > .w-nav-link {
   font-family: 'Inter', sans-serif !important;
-  font-size: 12.5px !important;
-  font-weight: 500 !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
   color: #1a1a1a !important;
-  padding: 0 14px !important;
-  height: 32px !important;
+  padding: 6px 0 !important;
+  height: auto !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   position: relative !important;
   text-decoration: none !important;
-  border: 1px solid rgba(0, 0, 0, 0.08) !important;
-  border-radius: 99px !important;
+  border: none !important;
+  border-radius: 0 !important;
   background-color: transparent !important;
   box-shadow: none !important;
   z-index: 1 !important;
-  letter-spacing: 0.01em !important;
+  letter-spacing: 0.06em !important;
   white-space: nowrap !important;
-  transition: all 0.2s ease !important;
+  transition: color 0.2s ease, opacity 0.2s ease !important;
 }
 
 .header-section .nav-link::after,
@@ -788,26 +967,35 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
   content: none !important;
 }
 
-/* Hover styles - Capsule Highlight */
+/* Hover styles - Subtle editorial color shift */
 .header-section .header-nav-wrap > .nav-link:hover,
 .header-section .header-nav-wrap > .w-nav-link:hover {
-  color: #1a1a1a !important;
-  background-color: rgba(0, 0, 0, 0.04) !important;
-  border-color: rgba(0, 0, 0, 0.12) !important;
+  color: #0F3A20 !important;
+  opacity: 0.75 !important;
+  background-color: transparent !important;
 }
 
-/* GSAP Underline Inject element style - disabled for capsules */
+/* GSAP Underline Inject element style - disabled */
 .header-section .nav-underline {
   display: none !important;
 }
 
-/* Active current link styling - Stronger capsule highlight */
+/* Active current link styling */
 .header-section .header-nav-wrap > .nav-link.w--current,
 .header-section .header-nav-wrap > .w-nav-link.w--current {
-  color: #FFFFFF !important;
+  color: #0F3A20 !important;
   font-weight: 600 !important;
-  background-color: #1a1a1a !important;
-  border-color: #1a1a1a !important;
+  background-color: transparent !important;
+  border-bottom: 1.5px solid #0F3A20 !important;
+}
+
+.header-section.header-scrolled .header-nav-wrap {
+  gap: 18px !important;
+}
+
+.header-section.header-scrolled .header-nav-wrap > .nav-link,
+.header-section.header-scrolled .header-nav-wrap > .w-nav-link {
+  font-size: 12.5px !important;
 }
 
 /* --- RIGHT ACTION ITEMS: Elegant Glassmorphism Circles --- */
@@ -816,25 +1004,28 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
   padding: 0 !important;
   display: flex !important;
   align-items: center !important;
-  gap: 6px !important;
+  gap: 10px !important;
   box-sizing: border-box !important;
   margin-left: 12px !important;
   flex-shrink: 0 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* Circular button frame styles */
 .header-section .header-icon,
 .header-section .header-icon.user,
-.header-section .header-cart-droplet {
-  width: 32px !important;
-  height: 32px !important;
-  min-width: 32px !important;
-  min-height: 32px !important;
+.header-section .header-cart-droplet,
+.header-section .w-commerce-commercecartopenlink {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  min-height: 34px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   border-radius: 50% !important;
-  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
   background: transparent !important;
   cursor: pointer !important;
   transition: all 0.2s ease !important;
@@ -843,6 +1034,8 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
   box-sizing: border-box !important;
   color: #1a1a1a !important;
   text-decoration: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* Cart wrapper helper tag */
@@ -1092,64 +1285,99 @@ p, .products-description, .product-desc-short, .reviews-text, .spec-table td {
   }
 }
 
+@media (max-width: 767px) {
+  .header-section {
+    top: 10px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 94% !important;
+    max-width: 94% !important;
+    padding: 0 12px !important;
+    height: 46px !important;
+    box-sizing: border-box !important;
+  }
+
+  .header-section .container-default,
+  .header-section .container-default._1880 {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .header-section .header-block {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .header-section .header-brand {
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .header-section .brand-text-block {
+    display: none !important;
+  }
+
+  .header-section .header-brand-logo {
+    height: 26px !important;
+    width: auto !important;
+  }
+
+  .header-section .header-button-block {
+    display: flex !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: 6px !important;
+    gap: 6px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .header-section .header-cart {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .header-section .header-icon,
+  .header-section .header-icon.user,
+  .header-section .w-commerce-commercecartopenlink,
+  .header-section .header-cart-droplet,
+  .header-section .header-menu-button {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
+  }
+
+  .header-section .header-icon svg,
+  .header-section .header-icon.user svg,
+  .header-section .header-cart-droplet svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .header-section .header-menu-button {
+    margin-left: 0 !important;
+    flex-shrink: 0 !important;
+  }
+}
+
 /* =============================================
    HERO & BRAND ALIGNMENT DESIGN HOTFIXES
    ============================================= */
-
-/* Correct invisible scroll indicator colors to high-contrast #1a1a1a on white hero background */
-.bonsai-scroll-indicator {
-  position: absolute !important;
-  left: 5% !important;
-  bottom: 5% !important;
-  z-index: 5 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  width: auto !important;
-  pointer-events: none !important;
-}
-
-.bonsai-scroll-indicator .scroll-text {
-  font-family: var(--font-body) !important;
-  font-size: 9px !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.2em !important;
-  color: #1a1a1a !important;
-  writing-mode: vertical-rl !important;
-  transform: rotate(180deg) !important;
-  text-transform: uppercase !important;
-  margin-bottom: 8px !important;
-}
-
-.bonsai-scroll-indicator .scroll-line {
-  width: 1px !important;
-  height: 40px !important;
-  background-color: #1a1a1a !important;
-  display: block !important;
-}
-
-/* Correct left blank space when vertical text is hidden under 1400px width */
-@media (max-width: 1400px) {
-  .bonsai-vertical-text-wrap {
-    display: none !important;
-  }
-  .bonsai-content-wrapper {
-    grid-template-columns: 1fr 1.15fr !important;
-    gap: 30px !important;
-  }
-  .bonsai-desc {
-    margin-left: 0 !important;
-  }
-  .bonsai-h1-line {
-    margin-left: 30px !important;
-  }
-  .bonsai-h1-sub {
-    margin-left: 50px !important;
-  }
-  .bonsai-explore-btn {
-    margin-left: 0 !important;
-  }
-}
 
 .motion-hero-bg-blobs {
   position: absolute;
@@ -1923,2069 +2151,3 @@ html, body {
   line-height: 1.45;
 }
 
-/* --- MULTI-LAYER HERO PARALLAX STAGE LAYOUT --- */
-.bonsai-right-stage {
-  position: relative !important;
-  overflow: visible !important;
-}
-
-.bonsai-product-container {
-  position: relative !important;
-  overflow: visible !important;
-  width: 100% !important;
-  height: 100% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.bonsai-product-img {
-  position: absolute !important;
-  width: auto !important;
-  object-fit: contain !important;
-  transform-origin: bottom center !important;
-}
-
-.bonsai-parallax-bottle {
-  height: 84% !important;
-  bottom: 12% !important;
-  left: 10% !important;
-  z-index: 20 !important;
-  filter: drop-shadow(0 15px 35px rgba(22, 61, 43, 0.15)) !important;
-}
-
-.bonsai-parallax-ghee {
-  height: 64% !important;
-  bottom: 8% !important;
-  right: 8% !important;
-  z-index: 30 !important;
-  filter: drop-shadow(0 18px 40px rgba(22, 61, 43, 0.22)) !important;
-}
-
-.bonsai-parallax-stage {
-  z-index: 10 !important;
-}
-
-.bonsai-parallax-shape {
-  z-index: 15 !important;
-  pointer-events: none !important;
-}
-
-.bonsai-product-labels {
-  z-index: 40 !important;
-}
-
-/* =============================================
-   HOME HEADER + HERO FINAL RESPONSIVE POLISH
-   ============================================= */
-.homepage-header.header-section {
-  top: max(14px, env(safe-area-inset-top)) !important;
-  width: min(1120px, calc(100vw - 32px)) !important;
-  max-width: none !important;
-  height: 64px !important;
-  padding: 8px !important;
-  border-radius: 999px !important;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(250, 248, 244, 0.78)) !important;
-  border: 1px solid rgba(22, 61, 43, 0.10) !important;
-  box-shadow:
-    0 18px 50px rgba(22, 61, 43, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.85) !important;
-}
-
-.homepage-header .header-block {
-  gap: 14px !important;
-  min-width: 0 !important;
-}
-
-.homepage-header .header-brand {
-  height: 48px !important;
-  min-width: 188px !important;
-  padding: 0 14px 0 10px !important;
-  gap: 10px !important;
-  border-radius: 999px !important;
-}
-
-.homepage-header .header-brand-logo {
-  width: 34px !important;
-  height: 34px !important;
-}
-
-.homepage-header .brand-text-title {
-  font-size: 12px !important;
-  letter-spacing: 0.08em !important;
-}
-
-.homepage-header .brand-text-subtitle {
-  font-size: 8px !important;
-  letter-spacing: 0.18em !important;
-}
-
-.homepage-header .header-menu {
-  flex: 1 1 auto !important;
-  min-width: 0 !important;
-  justify-content: center !important;
-}
-
-.homepage-header .header-menu-block {
-  height: 44px !important;
-  border-radius: 999px !important;
-  background: rgba(255, 255, 255, 0.52) !important;
-  border: 1px solid rgba(22, 61, 43, 0.08) !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
-}
-
-.homepage-header .header-nav-wrap {
-  gap: 2px !important;
-  padding: 4px !important;
-}
-
-.homepage-header .header-nav-wrap > .nav-link,
-.homepage-header .header-nav-wrap > .w-nav-link {
-  height: 34px !important;
-  padding: 0 15px !important;
-  border: 0 !important;
-  border-radius: 999px !important;
-  font-size: 12px !important;
-  font-weight: 650 !important;
-  color: rgba(30, 37, 34, 0.78) !important;
-  background: transparent !important;
-}
-
-.homepage-header .header-nav-wrap > .nav-link:hover,
-.homepage-header .header-nav-wrap > .w-nav-link:hover,
-.homepage-header .header-nav-wrap > .nav-link.w--current,
-.homepage-header .header-nav-wrap > .w-nav-link.w--current {
-  color: #0F3A20 !important;
-  background: #FFFFFF !important;
-  box-shadow: 0 8px 22px rgba(22, 61, 43, 0.10) !important;
-}
-
-.homepage-header .header-button-block {
-  gap: 8px !important;
-  margin-left: 0 !important;
-}
-
-.homepage-header .header-icon,
-.homepage-header .header-icon.user,
-.homepage-header .header-cart-droplet,
-.homepage-header .w-commerce-commercecartopenlink {
-  width: 40px !important;
-  height: 40px !important;
-  min-width: 40px !important;
-  min-height: 40px !important;
-  border: 1px solid rgba(22, 61, 43, 0.10) !important;
-  background: rgba(255, 255, 255, 0.68) !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
-}
-
-.homepage-header .header-icon svg,
-.homepage-header .header-icon.user svg,
-.homepage-header .header-cart-droplet svg {
-  width: 18px !important;
-  height: 18px !important;
-}
-
-.homepage-header .header-menu-button {
-  display: none !important;
-}
-
-.bonsai-hero {
-  min-height: 100svh !important;
-  padding: clamp(108px, 12vh, 150px) clamp(22px, 5vw, 80px) clamp(52px, 7vh, 86px) !important;
-  background:
-    radial-gradient(circle at 88% 18%, rgba(211, 182, 133, 0.20), transparent 28%),
-    linear-gradient(180deg, #FFFFFF 0%, #FCFAF6 100%) !important;
-  isolation: isolate !important;
-}
-
-.bonsai-content-wrapper {
-  grid-template-columns: minmax(0, 0.78fr) minmax(420px, 1.05fr) !important;
-  gap: clamp(32px, 5vw, 76px) !important;
-  max-width: 1240px !important;
-  align-items: center !important;
-}
-
-.bonsai-vertical-text-wrap,
-.bonsai-geo-frame,
-.bonsai-scroll-indicator {
-  display: none !important;
-}
-
-.bonsai-left-content {
-  max-width: 520px !important;
-}
-
-.bonsai-h1-large {
-  font-size: clamp(48px, 6vw, 82px) !important;
-  letter-spacing: 0 !important;
-  line-height: 0.92 !important;
-}
-
-.bonsai-h1-line {
-  width: clamp(120px, 14vw, 190px) !important;
-  margin: 20px 0 12px 4px !important;
-  background-color: rgba(15, 58, 32, 0.88) !important;
-}
-
-.bonsai-h1-sub {
-  margin-left: 0 !important;
-  font-size: clamp(18px, 2vw, 27px) !important;
-  letter-spacing: 0.08em !important;
-  color: #2E4F3F !important;
-}
-
-.bonsai-desc {
-  max-width: 430px !important;
-  margin: 26px 0 32px 0 !important;
-  font-size: clamp(14px, 1.15vw, 16px) !important;
-  line-height: 1.75 !important;
-}
-
-.bonsai-explore-btn {
-  margin-left: 0 !important;
-  min-height: 44px !important;
-  padding: 0 24px !important;
-  border-radius: 999px !important;
-  letter-spacing: 0.08em !important;
-  box-shadow: 0 14px 28px rgba(15, 58, 32, 0.18) !important;
-}
-
-.bonsai-right-stage {
-  width: 100% !important;
-  max-width: 640px !important;
-  justify-self: center !important;
-  padding-bottom: 0 !important;
-}
-
-.bonsai-product-container {
-  aspect-ratio: 1.08 / 1 !important;
-  height: auto !important;
-  max-height: min(58vh, 600px) !important;
-  overflow: hidden !important;
-  border-radius: clamp(18px, 2vw, 26px) !important;
-  background: #F8F2E8 !important;
-  box-shadow:
-    0 28px 70px rgba(22, 61, 43, 0.16),
-    inset 0 1px 0 rgba(255, 255, 255, 0.75) !important;
-}
-
-.bonsai-product-img-single {
-  width: 100% !important;
-  height: 100% !important;
-  max-height: none !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-}
-
-.bonsai-product-labels {
-  width: 100% !important;
-  margin-top: 18px !important;
-  justify-content: center !important;
-  gap: 12px !important;
-  flex-wrap: wrap !important;
-}
-
-.bonsai-label-item {
-  min-height: 34px !important;
-  padding: 0 13px !important;
-  border-radius: 999px !important;
-  background: rgba(255, 255, 255, 0.72) !important;
-  border: 1px solid rgba(22, 61, 43, 0.08) !important;
-  box-shadow: 0 8px 22px rgba(22, 61, 43, 0.07) !important;
-}
-
-.bonsai-down-arrow {
-  right: clamp(18px, 4vw, 56px) !important;
-  bottom: clamp(18px, 4vh, 42px) !important;
-}
-
-@media (max-width: 1120px) {
-  .homepage-header.header-section {
-    width: min(960px, calc(100vw - 24px)) !important;
-  }
-
-  .homepage-header .header-brand {
-    min-width: 168px !important;
-  }
-
-  .homepage-header .header-nav-wrap > .nav-link,
-  .homepage-header .header-nav-wrap > .w-nav-link {
-    padding: 0 11px !important;
-  }
-}
-
-@media (max-width: 991px) {
-  .homepage-header.header-section {
-    width: calc(100vw - 24px) !important;
-    height: 60px !important;
-    padding: 7px !important;
-  }
-
-  .homepage-header .header-brand {
-    min-width: 0 !important;
-    max-width: calc(100vw - 196px) !important;
-    padding: 0 10px 0 6px !important;
-  }
-
-  .homepage-header .brand-text-block {
-    overflow: hidden !important;
-  }
-
-  .homepage-header .brand-text-title,
-  .homepage-header .brand-text-subtitle {
-    white-space: nowrap !important;
-  }
-
-  .homepage-header .header-menu {
-    display: contents !important;
-  }
-
-  .homepage-header .header-menu-block {
-    top: calc(100% + 10px) !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-    padding: 8px !important;
-    border-radius: 24px !important;
-    background: rgba(255, 255, 255, 0.96) !important;
-    backdrop-filter: blur(22px) saturate(160%) !important;
-    -webkit-backdrop-filter: blur(22px) saturate(160%) !important;
-  }
-
-  .homepage-header .header-nav-wrap {
-    padding: 0 !important;
-  }
-
-  .homepage-header .header-nav-wrap > .nav-link,
-  .homepage-header .header-nav-wrap > .w-nav-link {
-    border-radius: 16px !important;
-    padding: 14px 16px !important;
-    justify-content: flex-start !important;
-  }
-
-  .homepage-header .header-button-block {
-    margin-right: 0 !important;
-  }
-
-  .homepage-header .header-icon,
-  .homepage-header .header-icon.user,
-  .homepage-header .header-cart-droplet,
-  .homepage-header .w-commerce-commercecartopenlink,
-  .homepage-header .header-menu-button {
-    width: 38px !important;
-    height: 38px !important;
-    min-width: 38px !important;
-    min-height: 38px !important;
-  }
-
-  .homepage-header .header-menu-button {
-    display: flex !important;
-    background: #0F3A20 !important;
-    color: #FFFFFF !important;
-    border: 0 !important;
-    box-shadow: 0 10px 24px rgba(15, 58, 32, 0.20) !important;
-  }
-
-  .homepage-header .header-menu-button-block .top,
-  .homepage-header .header-menu-button-block .middle,
-  .homepage-header .header-menu-button-block .bottom {
-    background-color: #FFFFFF !important;
-  }
-
-  .bonsai-hero {
-    min-height: auto !important;
-    padding-top: 104px !important;
-  }
-
-  .bonsai-content-wrapper {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 34px !important;
-  }
-
-  .bonsai-left-content {
-    align-items: center !important;
-    text-align: center !important;
-    margin: 0 auto !important;
-    max-width: 640px !important;
-  }
-
-  .bonsai-h1-line {
-    margin: 18px auto 12px !important;
-  }
-
-  .bonsai-desc {
-    margin: 24px auto 28px !important;
-  }
-
-  .bonsai-right-stage {
-    max-width: min(640px, 100%) !important;
-  }
-
-  .bonsai-product-container {
-    aspect-ratio: 1.28 / 1 !important;
-    max-height: none !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .homepage-header.header-section {
-    width: calc(100vw - 18px) !important;
-    height: 56px !important;
-    top: max(9px, env(safe-area-inset-top)) !important;
-  }
-
-  .homepage-header .header-brand-logo {
-    width: 30px !important;
-    height: 30px !important;
-  }
-
-  .homepage-header .brand-text-title {
-    font-size: 10.5px !important;
-  }
-
-  .homepage-header .brand-text-subtitle {
-    font-size: 7px !important;
-  }
-
-  .homepage-header .header-icon:first-child {
-    display: none !important;
-  }
-
-  .homepage-header .header-icon,
-  .homepage-header .header-icon.user,
-  .homepage-header .header-cart-droplet,
-  .homepage-header .w-commerce-commercecartopenlink,
-  .homepage-header .header-menu-button {
-    width: 35px !important;
-    height: 35px !important;
-    min-width: 35px !important;
-    min-height: 35px !important;
-  }
-
-  .bonsai-hero {
-    padding: 92px 16px 42px !important;
-  }
-
-  .bonsai-content-wrapper {
-    gap: 26px !important;
-  }
-
-  .bonsai-h1-large {
-    font-size: clamp(40px, 13vw, 58px) !important;
-  }
-
-  .bonsai-h1-sub {
-    font-size: clamp(14px, 4.4vw, 18px) !important;
-    letter-spacing: 0.04em !important;
-  }
-
-  .bonsai-desc {
-    max-width: 34rem !important;
-  }
-
-  .bonsai-product-container {
-    aspect-ratio: 1 / 0.92 !important;
-    border-radius: 18px !important;
-  }
-
-  .bonsai-product-labels {
-    align-items: center !important;
-  }
-
-  .bonsai-label-item .label-text {
-    font-size: 10px !important;
-  }
-
-  .bonsai-down-arrow {
-    display: none !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .homepage-header .brand-text-block {
-    display: none !important;
-  }
-
-  .homepage-header .header-brand {
-    max-width: 48px !important;
-  }
-
-  .bonsai-hero {
-    padding-left: 12px !important;
-    padding-right: 12px !important;
-  }
-}
-
-/* =============================================
-   REFERENCE-DRIVEN EDITORIAL HOME HERO
-   ============================================= */
-body:has(.homepage-header) {
-  background: #244C42 !important;
-}
-
-.homepage-header.header-section {
-  top: clamp(28px, 7vh, 84px) !important;
-  width: min(1160px, calc(100vw - 72px)) !important;
-  height: 74px !important;
-  padding: 0 clamp(26px, 4vw, 64px) !important;
-  background: transparent !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  z-index: 1010 !important;
-}
-
-.homepage-header .container-default,
-.homepage-header .header-block {
-  height: 100% !important;
-}
-
-.homepage-header .header-brand {
-  position: absolute !important;
-  top: 0 !important;
-  left: clamp(26px, 4vw, 64px) !important;
-  width: 48px !important;
-  min-width: 48px !important;
-  height: 82px !important;
-  padding: 12px 8px !important;
-  justify-content: flex-start !important;
-  flex-direction: column !important;
-  gap: 8px !important;
-  border-radius: 0 !important;
-  background: #202321 !important;
-  box-shadow: 0 18px 32px rgba(18, 34, 29, 0.24) !important;
-}
-
-.homepage-header .header-brand::after {
-  content: "" !important;
-  position: absolute !important;
-  left: 0 !important;
-  bottom: -18px !important;
-  width: 0 !important;
-  height: 0 !important;
-  border-style: solid !important;
-  border-width: 18px 48px 0 0 !important;
-  border-color: #202321 transparent transparent transparent !important;
-}
-
-.homepage-header .header-brand-logo {
-  width: 26px !important;
-  height: 26px !important;
-  filter: brightness(0) invert(1) !important;
-  opacity: 0.92 !important;
-}
-
-.homepage-header .brand-text-block {
-  display: none !important;
-}
-
-.homepage-header .header-menu {
-  flex: 1 1 auto !important;
-  justify-content: center !important;
-}
-
-.homepage-header .header-menu-block {
-  height: auto !important;
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-.homepage-header .header-nav-wrap {
-  gap: clamp(22px, 4.2vw, 58px) !important;
-  padding: 0 !important;
-}
-
-.homepage-header .header-nav-wrap > .nav-link,
-.homepage-header .header-nav-wrap > .w-nav-link {
-  height: auto !important;
-  padding: 0 !important;
-  color: rgba(20, 24, 22, 0.72) !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  font-family: var(--font-ui) !important;
-  font-size: 10px !important;
-  font-weight: 500 !important;
-  letter-spacing: 0 !important;
-}
-
-.homepage-header .header-nav-wrap > .nav-link:hover,
-.homepage-header .header-nav-wrap > .w-nav-link:hover,
-.homepage-header .header-nav-wrap > .nav-link.w--current,
-.homepage-header .header-nav-wrap > .w-nav-link.w--current {
-  color: #0F3A20 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-.homepage-header .header-button-block {
-  gap: 20px !important;
-  margin-left: 0 !important;
-}
-
-.homepage-header .header-icon,
-.homepage-header .header-icon.user,
-.homepage-header .header-cart-droplet,
-.homepage-header .w-commerce-commercecartopenlink {
-  width: 18px !important;
-  min-width: 18px !important;
-  height: 18px !important;
-  min-height: 18px !important;
-  border: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  color: #202321 !important;
-}
-
-.homepage-header .header-icon svg,
-.homepage-header .header-icon.user svg,
-.homepage-header .header-cart-droplet svg {
-  width: 14px !important;
-  height: 14px !important;
-  stroke-width: 1.8 !important;
-}
-
-.homepage-header .header-cart-droplet .droplet-3d {
-  width: 18px !important;
-  height: 18px !important;
-}
-
-.homepage-header .header-cart-droplet .droplet-3d svg path:first-child {
-  fill: transparent !important;
-  stroke: currentColor !important;
-}
-
-.homepage-header .header-quantity {
-  top: -9px !important;
-  right: -11px !important;
-  width: 14px !important;
-  min-width: 14px !important;
-  height: 14px !important;
-  background: #244C42 !important;
-  border-color: #FFFFFF !important;
-  font-size: 8px !important;
-}
-
-.bonsai-hero {
-  min-height: 100svh !important;
-  padding: clamp(28px, 7vh, 84px) clamp(18px, 5vw, 58px) clamp(28px, 7vh, 72px) !important;
-  background: #244C42 !important;
-  align-items: center !important;
-}
-
-.bonsai-content-wrapper {
-  position: relative !important;
-  display: grid !important;
-  grid-template-columns: 90px minmax(260px, 0.72fr) minmax(430px, 1.18fr) !important;
-  grid-template-areas: "vertical copy visual" !important;
-  align-items: center !important;
-  width: min(1160px, 100%) !important;
-  max-width: 1160px !important;
-  min-height: min(650px, calc(100svh - clamp(56px, 14vh, 156px))) !important;
-  padding: clamp(118px, 14vh, 148px) clamp(42px, 6vw, 74px) clamp(44px, 7vh, 68px) !important;
-  gap: clamp(20px, 3vw, 44px) !important;
-  background: #FFFFFF !important;
-  box-shadow: 0 34px 80px rgba(11, 30, 25, 0.36) !important;
-  overflow: hidden !important;
-  isolation: isolate !important;
-}
-
-.bonsai-content-wrapper::before {
-  content: "" !important;
-  position: absolute !important;
-  right: 0 !important;
-  top: 34% !important;
-  width: 53% !important;
-  height: 120px !important;
-  background: #E7EEEC !important;
-  z-index: -1 !important;
-}
-
-.bonsai-content-wrapper::after {
-  content: "" !important;
-  position: absolute !important;
-  right: clamp(26px, 4vw, 56px) !important;
-  top: 37% !important;
-  width: min(36vw, 430px) !important;
-  height: 1px !important;
-  background: rgba(32, 35, 33, 0.15) !important;
-  z-index: 0 !important;
-}
-
-.bonsai-canvas-mark {
-  position: absolute !important;
-  right: clamp(34px, 5vw, 72px) !important;
-  top: 34% !important;
-  z-index: 0 !important;
-  color: rgba(255, 255, 255, 0.82) !important;
-  font-family: var(--font-editorial) !important;
-  font-size: clamp(74px, 9vw, 120px) !important;
-  line-height: 1 !important;
-  font-weight: 500 !important;
-  pointer-events: none !important;
-}
-
-.bonsai-bottom-geometry {
-  position: absolute !important;
-  left: clamp(52px, 7vw, 94px) !important;
-  bottom: clamp(26px, 5vh, 48px) !important;
-  width: 230px !important;
-  height: 92px !important;
-  z-index: 2 !important;
-  pointer-events: none !important;
-}
-
-.bonsai-bottom-geometry .geo-corner {
-  position: absolute !important;
-  left: 0 !important;
-  bottom: 0 !important;
-  width: 168px !important;
-  height: 78px !important;
-  border-left: 2px solid #202321 !important;
-  border-bottom: 2px solid #202321 !important;
-}
-
-.bonsai-bottom-geometry .geo-square {
-  position: absolute !important;
-  left: 92px !important;
-  bottom: 16px !important;
-  width: 68px !important;
-  height: 68px !important;
-  border: 2px solid rgba(32, 35, 33, 0.65) !important;
-}
-
-.bonsai-bottom-geometry .geo-line {
-  position: absolute !important;
-  left: 74px !important;
-  bottom: 0 !important;
-  width: 132px !important;
-  height: 48px !important;
-  background: #2F6257 !important;
-}
-
-.bonsai-bottom-geometry .geo-line::after {
-  content: "milk" !important;
-  position: absolute !important;
-  right: 8px !important;
-  bottom: 9px !important;
-  color: rgba(255, 255, 255, 0.76) !important;
-  font-size: 9px !important;
-  writing-mode: vertical-rl !important;
-  transform: rotate(180deg) !important;
-}
-
-.bonsai-vertical-text-wrap {
-  grid-area: vertical !important;
-  display: flex !important;
-  width: auto !important;
-  height: 100% !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.bonsai-vertical-text {
-  display: block !important;
-  opacity: 1 !important;
-  color: #202321 !important;
-  font-family: var(--font-body) !important;
-  font-size: clamp(44px, 5vw, 68px) !important;
-  font-weight: 300 !important;
-  letter-spacing: 0 !important;
-  line-height: 1 !important;
-}
-
-.bonsai-left-content {
-  grid-area: copy !important;
-  max-width: 410px !important;
-  align-self: center !important;
-  padding-top: 18px !important;
-}
-
-.bonsai-h1 {
-  color: #202321 !important;
-}
-
-.bonsai-h1-large {
-  font-family: var(--font-body) !important;
-  font-size: clamp(34px, 4vw, 54px) !important;
-  font-weight: 300 !important;
-  letter-spacing: 0.12em !important;
-  line-height: 1 !important;
-  white-space: nowrap !important;
-}
-
-.bonsai-h1-line {
-  width: 128px !important;
-  height: 2px !important;
-  margin: 18px 0 8px 0 !important;
-  background: #202321 !important;
-}
-
-.bonsai-h1-sub {
-  margin-left: 76px !important;
-  font-size: clamp(13px, 1.25vw, 17px) !important;
-  font-weight: 300 !important;
-  letter-spacing: 0.12em !important;
-  color: #202321 !important;
-  white-space: nowrap !important;
-}
-
-.bonsai-desc {
-  max-width: 310px !important;
-  margin: 22px 0 24px 0 !important;
-  font-size: 11px !important;
-  line-height: 1.75 !important;
-  color: rgba(32, 35, 33, 0.44) !important;
-}
-
-.bonsai-explore-btn {
-  min-height: 30px !important;
-  padding: 0 16px !important;
-  border-radius: 0 !important;
-  background: #202321 !important;
-  box-shadow: none !important;
-  font-size: 9px !important;
-  letter-spacing: 0 !important;
-  text-transform: lowercase !important;
-}
-
-.bonsai-right-stage {
-  grid-area: visual !important;
-  position: relative !important;
-  max-width: none !important;
-  min-height: clamp(320px, 48vw, 530px) !important;
-  align-self: center !important;
-  justify-self: stretch !important;
-}
-
-.bonsai-stage-bg {
-  display: block !important;
-  position: absolute !important;
-  right: -10% !important;
-  top: 28% !important;
-  width: 82% !important;
-  height: 132px !important;
-  background: #E7EEEC !important;
-  z-index: 0 !important;
-}
-
-.bonsai-product-container {
-  position: absolute !important;
-  inset: 0 !important;
-  aspect-ratio: auto !important;
-  max-height: none !important;
-  height: auto !important;
-  overflow: visible !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  z-index: 3 !important;
-}
-
-.bonsai-product-img-single {
-  position: absolute !important;
-  left: 50% !important;
-  top: 49% !important;
-  width: min(790px, 122%) !important;
-  height: auto !important;
-  max-width: none !important;
-  transform: translate(-50%, -50%) !important;
-  object-fit: contain !important;
-  filter: drop-shadow(0 24px 22px rgba(31, 47, 40, 0.18)) !important;
-}
-
-.bonsai-oval-stage {
-  position: absolute !important;
-  left: 50% !important;
-  bottom: clamp(36px, 6vh, 68px) !important;
-  width: min(520px, 78%) !important;
-  height: 54px !important;
-  border: 2px solid #202321 !important;
-  border-radius: 50% !important;
-  transform: translateX(-50%) !important;
-  z-index: 1 !important;
-}
-
-.bonsai-product-labels {
-  position: absolute !important;
-  left: 50% !important;
-  bottom: clamp(12px, 3vh, 28px) !important;
-  width: min(380px, 70%) !important;
-  transform: translateX(-50%) !important;
-  margin: 0 !important;
-  justify-content: space-between !important;
-  z-index: 5 !important;
-}
-
-.bonsai-label-item {
-  min-height: auto !important;
-  padding: 0 !important;
-  gap: 8px !important;
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-.bonsai-label-item .label-dot {
-  width: 4px !important;
-  height: 4px !important;
-  background: #202321 !important;
-}
-
-.bonsai-label-item .label-text {
-  font-size: 9px !important;
-  letter-spacing: 0 !important;
-  color: rgba(32, 35, 33, 0.38) !important;
-  text-transform: none !important;
-}
-
-.bonsai-mini-controls {
-  position: absolute !important;
-  left: 50% !important;
-  bottom: 2px !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 14px !important;
-  transform: translateX(-50%) !important;
-  z-index: 6 !important;
-}
-
-.bonsai-mini-controls span {
-  width: 16px !important;
-  height: 7px !important;
-  border-bottom: 1px solid #202321 !important;
-  border-radius: 50% !important;
-}
-
-.bonsai-mini-controls strong {
-  display: block !important;
-  width: 12px !important;
-  height: 12px !important;
-  border: 2px solid #202321 !important;
-  border-radius: 50% !important;
-  background: #FFFFFF !important;
-}
-
-.bonsai-down-arrow {
-  right: clamp(36px, 6vw, 70px) !important;
-  bottom: clamp(28px, 6vh, 58px) !important;
-  color: #202321 !important;
-}
-
-@media (max-width: 1100px) {
-  .homepage-header.header-section,
-  .bonsai-content-wrapper {
-    width: min(960px, calc(100vw - 40px)) !important;
-  }
-
-  .bonsai-content-wrapper {
-    grid-template-columns: 72px minmax(220px, 0.8fr) minmax(360px, 1fr) !important;
-    padding-left: 42px !important;
-    padding-right: 42px !important;
-  }
-
-  .bonsai-product-img-single {
-    width: min(700px, 128%) !important;
-  }
-}
-
-@media (max-width: 860px) {
-  .homepage-header.header-section {
-    top: 18px !important;
-    width: calc(100vw - 28px) !important;
-    height: 56px !important;
-    padding: 0 18px !important;
-  }
-
-  .homepage-header .header-brand {
-    left: 18px !important;
-    width: 42px !important;
-    min-width: 42px !important;
-    height: 64px !important;
-    padding: 9px 7px !important;
-  }
-
-  .homepage-header .header-brand::after {
-    bottom: -14px !important;
-    border-width: 14px 42px 0 0 !important;
-  }
-
-  .homepage-header .header-menu {
-    display: contents !important;
-  }
-
-  .homepage-header .header-menu-block {
-    top: calc(100% + 16px) !important;
-    left: 0 !important;
-    width: 100% !important;
-    padding: 14px !important;
-    background: #FFFFFF !important;
-    border: 1px solid rgba(32, 35, 33, 0.08) !important;
-    border-radius: 0 !important;
-    box-shadow: 0 22px 44px rgba(15, 40, 34, 0.18) !important;
-  }
-
-  .homepage-header .header-nav-wrap {
-    gap: 0 !important;
-  }
-
-  .homepage-header .header-nav-wrap > .nav-link,
-  .homepage-header .header-nav-wrap > .w-nav-link {
-    width: 100% !important;
-    padding: 13px 10px !important;
-    font-size: 12px !important;
-  }
-
-  .homepage-header .header-button-block {
-    margin-left: auto !important;
-    gap: 14px !important;
-  }
-
-  .homepage-header .header-menu-button {
-    display: flex !important;
-    width: 34px !important;
-    height: 34px !important;
-    min-width: 34px !important;
-    min-height: 34px !important;
-    border-radius: 0 !important;
-    background: #202321 !important;
-  }
-
-  .bonsai-hero {
-    padding: 18px 14px 28px !important;
-    align-items: flex-start !important;
-  }
-
-  .bonsai-content-wrapper {
-    width: 100% !important;
-    min-height: auto !important;
-    grid-template-columns: 1fr !important;
-    grid-template-areas:
-      "copy"
-      "visual" !important;
-    padding: 110px 24px 42px !important;
-    gap: 28px !important;
-  }
-
-  .bonsai-content-wrapper::before {
-    top: 57% !important;
-    width: 100% !important;
-    height: 96px !important;
-  }
-
-  .bonsai-canvas-mark {
-    top: 57% !important;
-    right: 28px !important;
-    font-size: 76px !important;
-  }
-
-  .bonsai-vertical-text-wrap,
-  .bonsai-bottom-geometry {
-    display: none !important;
-  }
-
-  .bonsai-left-content {
-    align-items: flex-start !important;
-    text-align: left !important;
-    max-width: 420px !important;
-    margin: 0 !important;
-  }
-
-  .bonsai-h1-large {
-    white-space: normal !important;
-    font-size: clamp(34px, 10vw, 54px) !important;
-  }
-
-  .bonsai-h1-line {
-    margin-left: 0 !important;
-  }
-
-  .bonsai-h1-sub {
-    margin-left: 0 !important;
-    white-space: normal !important;
-  }
-
-  .bonsai-desc {
-    max-width: 340px !important;
-    font-size: 12px !important;
-  }
-
-  .bonsai-right-stage {
-    min-height: clamp(330px, 78vw, 560px) !important;
-  }
-
-  .bonsai-product-img-single {
-    top: 45% !important;
-    width: min(760px, 145%) !important;
-  }
-
-  .bonsai-oval-stage {
-    bottom: 52px !important;
-    width: 76% !important;
-  }
-}
-
-@media (max-width: 540px) {
-  .homepage-header .header-icon:first-child {
-    display: none !important;
-  }
-
-  .bonsai-content-wrapper {
-    padding: 96px 18px 34px !important;
-  }
-
-  .bonsai-content-wrapper::before {
-    top: 60% !important;
-  }
-
-  .bonsai-canvas-mark {
-    top: 60% !important;
-    font-size: 58px !important;
-  }
-
-  .bonsai-right-stage {
-    min-height: 340px !important;
-  }
-
-  .bonsai-product-img-single {
-    top: 43% !important;
-    width: min(650px, 172%) !important;
-  }
-
-  .bonsai-oval-stage {
-    bottom: 58px !important;
-    height: 36px !important;
-  }
-
-  .bonsai-product-labels {
-    width: 86% !important;
-    bottom: 24px !important;
-  }
-
-  .bonsai-mini-controls {
-    display: none !important;
-  }
-}
-
-/* Final screenshot-tuned corrections */
-.header-milk-wave {
-  display: none !important;
-}
-
-.bonsai-content-wrapper {
-  padding-top: clamp(92px, 12vh, 126px) !important;
-  min-height: min(650px, calc(100svh - clamp(56px, 11vh, 132px))) !important;
-}
-
-.homepage-header.header-section {
-  top: calc(clamp(28px, 7vh, 84px) + 28px) !important;
-}
-
-.bonsai-left-content {
-  padding-top: 0 !important;
-  transform: translateY(-14px) !important;
-}
-
-.bonsai-right-stage {
-  min-height: clamp(390px, 42vw, 490px) !important;
-  transform: translateY(-14px) !important;
-}
-
-.bonsai-product-img-single {
-  top: 45% !important;
-  width: min(720px, 116%) !important;
-}
-
-.bonsai-oval-stage {
-  bottom: clamp(22px, 4vh, 48px) !important;
-}
-
-.bonsai-product-labels {
-  bottom: clamp(2px, 1.5vh, 18px) !important;
-}
-
-@media (max-width: 860px) {
-  .homepage-header.header-section {
-    top: 18px !important;
-    background: transparent !important;
-  }
-
-  .bonsai-content-wrapper {
-    padding: 96px 22px 34px !important;
-    gap: 18px !important;
-  }
-
-  .bonsai-left-content {
-    transform: none !important;
-    max-width: 100% !important;
-  }
-
-  .bonsai-h1 {
-    gap: 0 !important;
-  }
-
-  .bonsai-h1-large {
-    font-size: clamp(36px, 11vw, 54px) !important;
-    letter-spacing: 0.08em !important;
-  }
-
-  .bonsai-h1-line {
-    width: 92px !important;
-    margin: 16px 0 8px 0 !important;
-  }
-
-  .bonsai-h1-sub {
-    display: block !important;
-    font-size: 13px !important;
-    color: rgba(32, 35, 33, 0.72) !important;
-    opacity: 1 !important;
-    transform: none !important;
-    margin-top: 4px !important;
-  }
-
-  .bonsai-desc {
-    display: block !important;
-    max-width: 320px !important;
-    margin: 18px 0 18px 0 !important;
-    color: rgba(32, 35, 33, 0.58) !important;
-    opacity: 1 !important;
-  }
-
-  .bonsai-explore-btn {
-    display: inline-flex !important;
-    opacity: 1 !important;
-  }
-
-  .bonsai-right-stage {
-    min-height: clamp(300px, 74vw, 450px) !important;
-    transform: none !important;
-    overflow: hidden !important;
-  }
-
-  .bonsai-stage-bg {
-    top: 34% !important;
-    right: -22px !important;
-    width: calc(100% + 44px) !important;
-    height: 92px !important;
-  }
-
-  .bonsai-product-img-single {
-    top: 48% !important;
-    width: min(560px, 118%) !important;
-  }
-
-  .bonsai-oval-stage {
-    bottom: 34px !important;
-    width: 74% !important;
-    height: 40px !important;
-  }
-
-  .bonsai-product-labels {
-    bottom: 8px !important;
-    width: 82% !important;
-  }
-
-  .bonsai-canvas-mark {
-    top: 50% !important;
-    opacity: 0.56 !important;
-  }
-}
-
-@media (max-width: 540px) {
-  .bonsai-content-wrapper {
-    padding: 92px 16px 28px !important;
-  }
-
-  .bonsai-h1-large {
-    font-size: clamp(34px, 10.6vw, 46px) !important;
-  }
-
-  .bonsai-desc {
-    max-width: 280px !important;
-    font-size: 11px !important;
-    line-height: 1.65 !important;
-  }
-
-  .bonsai-right-stage {
-    min-height: 292px !important;
-  }
-
-  .bonsai-product-img-single {
-    top: 49% !important;
-    width: 118% !important;
-  }
-
-  .bonsai-oval-stage {
-    bottom: 38px !important;
-    width: 76% !important;
-    height: 30px !important;
-    border-width: 1.5px !important;
-  }
-
-  .bonsai-product-labels {
-    display: none !important;
-  }
-}
-
-/* =============================================
-   FULL-BLEED PRODUCT HERO
-   The homepage intentionally has no outer artboard or tinted page margin.
-   ============================================= */
-html,
-body,
-body:has(.homepage-header) {
-  background: #ffffff !important;
-}
-
-.homepage-header.header-section {
-  position: absolute !important;
-  inset: 0 0 auto 0 !important;
-  width: 100% !important;
-  height: 88px !important;
-  padding: 0 clamp(20px, 4.4vw, 76px) !important;
-  background: rgba(255, 255, 255, 0.82) !important;
-  border-bottom: 1px solid rgba(15, 58, 32, 0.08) !important;
-  box-shadow: none !important;
-  backdrop-filter: blur(16px) saturate(135%) !important;
-  -webkit-backdrop-filter: blur(16px) saturate(135%) !important;
-  transform: none !important;
-  transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1), background 260ms ease !important;
-}
-
-.homepage-header.header-section.header-hidden {
-  transform: translateY(-100%) !important;
-}
-
-.homepage-header .container-default,
-.homepage-header .header-block {
-  width: 100% !important;
-  max-width: none !important;
-}
-
-.homepage-header .header-block {
-  position: relative !important;
-  display: flex !important;
-  min-width: 0 !important;
-}
-
-.homepage-header .header-brand {
-  position: absolute !important;
-  left: 0 !important;
-  width: auto !important;
-  min-width: 0 !important;
-  height: auto !important;
-  padding: 0 !important;
-  flex-direction: row !important;
-  gap: 10px !important;
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-.homepage-header .header-brand::after {
-  display: none !important;
-}
-
-.homepage-header .header-brand-logo {
-  width: 28px !important;
-  height: 28px !important;
-  padding: 6px !important;
-  border-radius: 8px !important;
-  background: #103b28 !important;
-  filter: brightness(0) invert(1) !important;
-  box-sizing: content-box !important;
-}
-
-.homepage-header .brand-text-block {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 1px !important;
-}
-
-.homepage-header .brand-text-title,
-.homepage-header .brand-text-subtitle {
-  display: block !important;
-  color: #103b28 !important;
-  font-family: var(--font-ui) !important;
-  font-size: 11px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.04em !important;
-  line-height: 1.15 !important;
-}
-
-.homepage-header .brand-text-subtitle {
-  color: rgba(16, 59, 40, 0.52) !important;
-  font-size: 8px !important;
-  font-weight: 600 !important;
-}
-
-.homepage-header .header-menu {
-  position: absolute !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-}
-
-.homepage-header .header-nav-wrap {
-  gap: clamp(20px, 3.1vw, 46px) !important;
-}
-
-.homepage-header .header-nav-wrap > .nav-link,
-.homepage-header .header-nav-wrap > .w-nav-link {
-  position: relative !important;
-  padding: 8px 0 !important;
-  color: rgba(16, 59, 40, 0.68) !important;
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  transition: color 180ms ease !important;
-}
-
-.homepage-header .header-nav-wrap > .nav-link::after,
-.homepage-header .header-nav-wrap > .w-nav-link::after {
-  content: "" !important;
-  position: absolute !important;
-  right: 0 !important;
-  bottom: 2px !important;
-  left: 0 !important;
-  height: 1.5px !important;
-  border-radius: 2px !important;
-  background: #103b28 !important;
-  transform: scaleX(0) !important;
-  transform-origin: left !important;
-  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1) !important;
-}
-
-.homepage-header .header-nav-wrap > .nav-link:hover::after,
-.homepage-header .header-nav-wrap > .w-nav-link:hover::after,
-.homepage-header .header-nav-wrap > .nav-link.w--current::after,
-.homepage-header .header-nav-wrap > .w-nav-link.w--current::after {
-  transform: scaleX(1) !important;
-}
-
-.homepage-header .header-button-block {
-  position: absolute !important;
-  right: 0 !important;
-  margin-left: auto !important;
-  gap: 8px !important;
-}
-
-.homepage-header .header-icon,
-.homepage-header .header-icon.user,
-.homepage-header .header-cart-droplet,
-.homepage-header .w-commerce-commercecartopenlink {
-  display: grid !important;
-  width: 34px !important;
-  min-width: 34px !important;
-  height: 34px !important;
-  min-height: 34px !important;
-  place-items: center !important;
-  border: 1px solid rgba(16, 59, 40, 0.1) !important;
-  border-radius: 8px !important;
-  color: #103b28 !important;
-  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), background 180ms ease !important;
-}
-
-.homepage-header .header-icon:hover,
-.homepage-header .header-icon.user:hover,
-.homepage-header .header-cart-droplet:hover,
-.homepage-header .w-commerce-commercecartopenlink:hover {
-  background: rgba(16, 59, 40, 0.06) !important;
-  transform: translateY(-1px) !important;
-}
-
-.bonsai-hero {
-  min-height: 100svh !important;
-  padding: 88px clamp(20px, 4.4vw, 76px) clamp(34px, 6vh, 76px) !important;
-  background: #ffffff !important;
-  align-items: stretch !important;
-}
-
-.bonsai-geo-frame,
-.bonsai-scroll-indicator,
-.bonsai-down-arrow,
-.bonsai-bottom-geometry {
-  display: none !important;
-}
-
-.bonsai-content-wrapper {
-  width: 100% !important;
-  max-width: 1440px !important;
-  min-height: min(780px, calc(100svh - 122px)) !important;
-  margin: 0 auto !important;
-  padding: clamp(46px, 7vh, 92px) 0 0 !important;
-  grid-template-columns: minmax(230px, 0.72fr) minmax(430px, 1.28fr) !important;
-  grid-template-areas: "copy visual" !important;
-  gap: clamp(28px, 6vw, 112px) !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  overflow: visible !important;
-}
-
-.bonsai-content-wrapper::before {
-  right: -4.4vw !important;
-  top: 20% !important;
-  width: min(56%, 760px) !important;
-  height: min(38%, 250px) !important;
-  background: #edf3f0 !important;
-}
-
-.bonsai-content-wrapper::after {
-  right: 3% !important;
-  top: 31% !important;
-  width: min(43%, 580px) !important;
-}
-
-.bonsai-canvas-mark {
-  right: 1% !important;
-  top: 18% !important;
-  color: rgba(16, 59, 40, 0.06) !important;
-  font-family: var(--font-ui) !important;
-  font-size: clamp(104px, 13vw, 190px) !important;
-  font-weight: 600 !important;
-  letter-spacing: 0 !important;
-}
-
-.bonsai-vertical-text-wrap {
-  display: none !important;
-}
-
-.bonsai-left-content {
-  max-width: 490px !important;
-  align-self: center !important;
-  padding: 0 0 clamp(42px, 8vh, 100px) !important;
-  transform: none !important;
-}
-
-.bonsai-h1-large {
-  color: #15221d !important;
-  font-size: clamp(44px, 5vw, 78px) !important;
-  font-weight: 300 !important;
-  letter-spacing: 0.075em !important;
-  line-height: 0.95 !important;
-}
-
-.bonsai-h1-line {
-  width: 86px !important;
-  height: 1px !important;
-  margin: 26px 0 12px !important;
-  background: #103b28 !important;
-}
-
-.bonsai-h1-sub {
-  margin-left: 0 !important;
-  color: #103b28 !important;
-  font-family: var(--font-ui) !important;
-  font-size: clamp(12px, 1.15vw, 16px) !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.16em !important;
-}
-
-.bonsai-desc {
-  max-width: 380px !important;
-  margin: 28px 0 30px !important;
-  color: rgba(21, 34, 29, 0.68) !important;
-  font-size: 13px !important;
-  line-height: 1.8 !important;
-}
-
-.bonsai-explore-btn {
-  min-height: 44px !important;
-  padding: 0 18px !important;
-  border-radius: 7px !important;
-  background: #103b28 !important;
-  font-family: var(--font-ui) !important;
-  font-size: 12px !important;
-  font-weight: 700 !important;
-  text-transform: none !important;
-}
-
-.bonsai-right-stage {
-  min-height: clamp(470px, 48vw, 690px) !important;
-  transform: none !important;
-  overflow: visible !important;
-}
-
-.bonsai-stage-bg {
-  right: -4.4vw !important;
-  top: 22% !important;
-  width: min(100%, 760px) !important;
-  height: min(40%, 280px) !important;
-  background: #edf3f0 !important;
-}
-
-.bonsai-product-container {
-  inset: 0 !important;
-}
-
-.bonsai-product-img-single {
-  top: 46% !important;
-  left: 50% !important;
-  width: min(1000px, 132%) !important;
-  max-height: none !important;
-  filter: drop-shadow(0 28px 26px rgba(13, 50, 34, 0.15)) !important;
-}
-
-.bonsai-oval-stage {
-  bottom: clamp(52px, 8vh, 92px) !important;
-  width: min(570px, 78%) !important;
-  height: 54px !important;
-  border-color: rgba(21, 34, 29, 0.82) !important;
-}
-
-.bonsai-product-labels {
-  bottom: clamp(14px, 3vh, 34px) !important;
-  width: min(440px, 72%) !important;
-}
-
-@media (max-width: 860px) {
-  .homepage-header.header-section {
-    position: absolute !important;
-    height: 72px !important;
-    padding: 0 18px !important;
-    background: rgba(255, 255, 255, 0.92) !important;
-  }
-
-  .homepage-header .header-menu {
-    position: static !important;
-    transform: none !important;
-  }
-
-  .homepage-header .header-brand {
-    position: static !important;
-  }
-
-  .homepage-header .header-button-block {
-    position: static !important;
-  }
-
-  .homepage-header .header-brand-logo {
-    width: 22px !important;
-    height: 22px !important;
-  }
-
-  .homepage-header .header-menu-block {
-    top: calc(100% + 8px) !important;
-    right: 18px !important;
-    left: auto !important;
-    width: min(280px, calc(100vw - 36px)) !important;
-    padding: 8px !important;
-    border: 1px solid rgba(16, 59, 40, 0.1) !important;
-    border-radius: 10px !important;
-    box-shadow: 0 18px 44px rgba(16, 59, 40, 0.12) !important;
-  }
-
-  .homepage-header .header-menu-button {
-    width: 36px !important;
-    height: 36px !important;
-    min-width: 36px !important;
-    min-height: 36px !important;
-    border-radius: 8px !important;
-    background: #103b28 !important;
-  }
-
-  .bonsai-hero {
-    min-height: auto !important;
-    padding: 72px 20px 30px !important;
-  }
-
-  .bonsai-content-wrapper {
-    min-height: auto !important;
-    padding: 64px 0 0 !important;
-    grid-template-columns: 1fr !important;
-    grid-template-areas: "copy" "visual" !important;
-    gap: 10px !important;
-  }
-
-  .bonsai-content-wrapper::before {
-    top: 53% !important;
-    width: 100% !important;
-    height: 180px !important;
-  }
-
-  .bonsai-left-content {
-    padding: 0 !important;
-  }
-
-  .bonsai-h1-large {
-    font-size: clamp(42px, 12vw, 66px) !important;
-  }
-
-  .bonsai-right-stage {
-    min-height: clamp(370px, 98vw, 600px) !important;
-  }
-
-  .bonsai-stage-bg {
-    right: -20px !important;
-    top: 23% !important;
-    width: calc(100% + 40px) !important;
-    height: 38% !important;
-  }
-
-  .bonsai-product-img-single {
-    top: 47% !important;
-    width: min(780px, 126%) !important;
-  }
-
-  .bonsai-canvas-mark {
-    top: 51% !important;
-    right: 0 !important;
-    font-size: 100px !important;
-  }
-}
-
-@media (max-width: 540px) {
-  .homepage-header .brand-text-block,
-  .homepage-header .header-icon:first-child {
-    display: none !important;
-  }
-
-  .bonsai-hero {
-    padding-right: 16px !important;
-    padding-left: 16px !important;
-  }
-
-  .bonsai-content-wrapper {
-    padding-top: 46px !important;
-  }
-
-  .bonsai-h1-large {
-    font-size: clamp(38px, 11vw, 54px) !important;
-  }
-
-  .bonsai-desc {
-    font-size: 12px !important;
-    line-height: 1.7 !important;
-  }
-
-  .bonsai-right-stage {
-    min-height: 360px !important;
-  }
-
-  .bonsai-product-img-single {
-    top: 46% !important;
-    width: 142% !important;
-  }
-
-  .bonsai-oval-stage {
-    bottom: 36px !important;
-    width: 78% !important;
-    height: 34px !important;
-  }
-}
-
-/* =============================================
-   DAIRY HERO: BOLD SPLIT-SCREEN EDITORIAL COMPOSITION
-   Homepage-only treatment inspired by the supplied reference.
-   ============================================= */
-body:has(.homepage-header) {
-  background: #28584c !important;
-}
-
-.homepage-header.header-section {
-  height: 76px !important;
-  background: rgba(40, 88, 76, 0.92) !important;
-  border-color: rgba(255, 255, 255, 0.13) !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) !important;
-  backdrop-filter: blur(14px) saturate(120%) !important;
-  -webkit-backdrop-filter: blur(14px) saturate(120%) !important;
-}
-
-.homepage-header.header-section.header-hidden {
-  transform: none !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
-
-.homepage-header .header-brand-logo {
-  background: transparent !important;
-  filter: brightness(0) invert(1) !important;
-}
-
-.homepage-header .brand-text-title,
-.homepage-header .brand-text-subtitle,
-.homepage-header .header-nav-wrap > .nav-link,
-.homepage-header .header-nav-wrap > .w-nav-link,
-.homepage-header .header-icon,
-.homepage-header .header-icon.user,
-.homepage-header .header-cart-droplet,
-.homepage-header .w-commerce-commercecartopenlink {
-  color: rgba(255, 255, 255, 0.9) !important;
-  opacity: 1 !important;
-}
-
-.homepage-header .brand-text-subtitle {
-  color: rgba(255, 255, 255, 0.55) !important;
-}
-
-.homepage-header .header-nav-wrap > .nav-link::after,
-.homepage-header .header-nav-wrap > .w-nav-link::after {
-  background: #f2c85f !important;
-}
-
-.homepage-header .header-brand,
-.homepage-header .header-menu,
-.homepage-header .header-button-block {
-  opacity: 1 !important;
-}
-
-.homepage-header .header-nav-wrap > .nav-link:hover,
-.homepage-header .header-nav-wrap > .w-nav-link:hover,
-.homepage-header .header-nav-wrap > .nav-link.w--current,
-.homepage-header .header-nav-wrap > .w-nav-link.w--current {
-  color: #ffffff !important;
-}
-
-.homepage-header .header-icon,
-.homepage-header .header-icon.user,
-.homepage-header .header-cart-droplet,
-.homepage-header .w-commerce-commercecartopenlink {
-  border-color: rgba(255, 255, 255, 0.18) !important;
-}
-
-.homepage-header .header-icon:hover,
-.homepage-header .header-icon.user:hover,
-.homepage-header .header-cart-droplet:hover,
-.homepage-header .w-commerce-commercecartopenlink:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
-}
-
-.bonsai-hero {
-  min-height: min(780px, 100svh) !important;
-  padding: 76px 0 0 !important;
-  background: #28584c !important;
-  overflow: hidden !important;
-}
-
-.bonsai-hero::before {
-  content: "" !important;
-  position: absolute !important;
-  top: 76px !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  width: 50.5% !important;
-  background: #b7d697 !important;
-  z-index: 0 !important;
-}
-
-.bonsai-hero::after {
-  content: "" !important;
-  position: absolute !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  height: 86px !important;
-  background: rgba(15, 46, 38, 0.54) !important;
-  z-index: 1 !important;
-}
-
-.bonsai-content-wrapper {
-  width: min(1360px, 100%) !important;
-  min-height: calc(min(780px, 100svh) - 76px) !important;
-  padding: clamp(44px, 7vh, 76px) clamp(28px, 5vw, 78px) 104px !important;
-  grid-template-columns: minmax(300px, 0.7fr) minmax(430px, 1.3fr) !important;
-  grid-template-areas: "copy visual" !important;
-  gap: clamp(10px, 4vw, 72px) !important;
-  z-index: 2 !important;
-}
-
-.bonsai-content-wrapper::before {
-  display: none !important;
-}
-
-.bonsai-content-wrapper::after,
-.bonsai-canvas-mark,
-.bonsai-oval-stage,
-.bonsai-mini-controls,
-.bonsai-product-labels {
-  display: none !important;
-}
-
-.bonsai-left-content {
-  z-index: 4 !important;
-  max-width: 520px !important;
-  padding: 0 !important;
-  color: #ffffff !important;
-}
-
-.bonsai-kicker {
-  display: block !important;
-  margin-bottom: 5px !important;
-  color: rgba(255, 255, 255, 0.82) !important;
-  font-family: var(--font-ui) !important;
-  font-size: 12px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.08em !important;
-}
-
-.bonsai-h1-large {
-  color: #ffffff !important;
-  font-family: 'Archivo Black', var(--font-body) !important;
-  font-size: clamp(56px, 7.8vw, 112px) !important;
-  font-weight: 400 !important;
-  letter-spacing: 0.01em !important;
-  line-height: 0.8 !important;
-}
-
-.bonsai-h1-line {
-  width: 68px !important;
-  margin: 24px 0 14px !important;
-  background: #f2c85f !important;
-}
-
-.bonsai-h1-sub {
-  color: rgba(255, 255, 255, 0.9) !important;
-  font-size: 13px !important;
-  letter-spacing: 0.09em !important;
-}
-
-.bonsai-desc {
-  max-width: 360px !important;
-  margin: 20px 0 24px !important;
-  color: rgba(255, 255, 255, 0.72) !important;
-  font-size: 13px !important;
-  line-height: 1.65 !important;
-}
-
-.bonsai-explore-btn {
-  min-height: 42px !important;
-  padding: 0 17px !important;
-  border: 1px solid rgba(255, 255, 255, 0.62) !important;
-  border-radius: 999px !important;
-  background: rgba(255, 255, 255, 0.1) !important;
-  color: #ffffff !important;
-  box-shadow: none !important;
-}
-
-.bonsai-explore-btn svg {
-  color: #f2c85f !important;
-}
-
-.bonsai-right-stage {
-  min-height: min(665px, calc(100svh - 160px)) !important;
-  z-index: 3 !important;
-}
-
-.bonsai-stage-bg {
-  display: none !important;
-}
-
-.bonsai-product-container {
-  position: absolute !important;
-  inset: -28px 0 -84px !important;
-  z-index: 3 !important;
-}
-
-.bonsai-product-img-single {
-  top: 50% !important;
-  left: 51% !important;
-  width: auto !important;
-  height: min(760px, 108%) !important;
-  max-width: min(500px, 92%) !important;
-  object-fit: contain !important;
-  filter: drop-shadow(0 26px 18px rgba(16, 51, 41, 0.18)) !important;
-}
-
-@media (max-width: 860px) {
-  body:has(.homepage-header) {
-    background: #28584c !important;
-  }
-
-  .homepage-header.header-section {
-    height: 68px !important;
-    background: #28584c !important;
-  }
-
-  .homepage-header .header-menu-block {
-    background: #28584c !important;
-    border-color: rgba(255, 255, 255, 0.18) !important;
-  }
-
-  .homepage-header .header-menu-button {
-    background: #f2c85f !important;
-  }
-
-  .bonsai-hero {
-    min-height: auto !important;
-    padding-top: 68px !important;
-  }
-
-  .bonsai-hero::before {
-    top: 46% !important;
-    width: 100% !important;
-    height: 54% !important;
-  }
-
-  .bonsai-hero::after {
-    display: none !important;
-  }
-
-  .bonsai-content-wrapper {
-    min-height: auto !important;
-    padding: 58px 24px 0 !important;
-    grid-template-columns: 1fr !important;
-    grid-template-areas: "copy" "visual" !important;
-    gap: 16px !important;
-  }
-
-  .bonsai-left-content {
-    padding-bottom: 12px !important;
-  }
-
-  .bonsai-h1-large {
-    font-size: clamp(56px, 16vw, 84px) !important;
-  }
-
-  .bonsai-right-stage {
-    min-height: min(630px, 112vw) !important;
-  }
-
-  .bonsai-product-container {
-    inset: -8px 0 -26px !important;
-  }
-
-  .bonsai-product-img-single {
-    left: 50% !important;
-    height: 112% !important;
-    max-width: 82% !important;
-  }
-}
-
-@media (max-width: 540px) {
-  .bonsai-content-wrapper {
-    padding: 48px 18px 0 !important;
-  }
-
-  .bonsai-kicker {
-    font-size: 10px !important;
-  }
-
-  .bonsai-h1-large {
-    font-size: clamp(52px, 16.2vw, 68px) !important;
-  }
-
-  .bonsai-h1-sub {
-    font-size: 11px !important;
-  }
-
-  .bonsai-desc {
-    max-width: 300px !important;
-    font-size: 12px !important;
-  }
-
-  .bonsai-right-stage {
-    min-height: 460px !important;
-  }
-
-  .bonsai-product-img-single {
-    height: 108% !important;
-    max-width: 88% !important;
-  }
-}

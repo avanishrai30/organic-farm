@@ -3,12 +3,21 @@ import ReactDOM from 'react-dom/client';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { PlaceCard } from '@/components/ui/card-22';
 
-// Bonsai-Style Minimalist Hero Component with GSAP Animations
+// Bonsai-Style Minimalist Editorial Hero Component (Accurate Art-Direction Match)
 const Hero = () => {
   const { scrollY } = useScroll();
-  const heroOpacity = useTransform(scrollY, [0, 600], [1, 0]);
-  const heroY = useTransform(scrollY, [0, 600], [0, -60]);
+  const heroOpacity = useTransform(scrollY, [0, 500], [1, 0.05]);
+  const heroY = useTransform(scrollY, [0, 500], [0, -40]);
+  const productY = useTransform(scrollY, [0, 500], [0, -20]);
+  const numeralY = useTransform(scrollY, [0, 500], [0, 30]);
   const heroRef = useRef<HTMLElement>(null);
+
+  const [activeProductIdx, setActiveProductIdx] = useState(0);
+  const products = [
+    { name: 'A2 DESI COW MILK', id: 'fresh-organic-milk' },
+    { name: 'BILONA GHEE', id: 'premium-desi-ghee' },
+    { name: 'FRESH PANEER', id: 'fresh-paneer' },
+  ];
 
   const handleExplore = () => {
     const el = document.getElementById('react-featured-products');
@@ -19,6 +28,14 @@ const Hero = () => {
     }
   };
 
+  const nextProduct = () => {
+    setActiveProductIdx((prev) => (prev + 1) % products.length);
+  };
+
+  const prevProduct = () => {
+    setActiveProductIdx((prev) => (prev - 1 + products.length) % products.length);
+  };
+
   return (
     <motion.section
       className="bonsai-hero"
@@ -26,117 +43,151 @@ const Hero = () => {
       ref={heroRef}
       style={{ opacity: heroOpacity }}
     >
-      {/* Geometric Frame Decoration */}
-      <div className="bonsai-geo-frame">
-        <div className="geo-filled"></div>
+      {/* Bottom-Left Geometric Composition from Bonsai Reference */}
+      <div className="bonsai-geo-frame" aria-hidden="true">
+        <div className="geo-filled">
+          <span className="geo-scroll-text">SCROLL</span>
+        </div>
         <div className="geo-outline-1"></div>
         <div className="geo-outline-2"></div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="bonsai-scroll-indicator">
-        <span className="scroll-text">scroll</span>
-        <div className="scroll-line"></div>
-      </div>
-
       {/* Main Content Area */}
       <div className="bonsai-content-wrapper">
-        <div className="bonsai-canvas-mark" aria-hidden="true">01</div>
-        <div className="bonsai-bottom-geometry" aria-hidden="true">
-          <span className="geo-corner"></span>
-          <span className="geo-square"></span>
-          <span className="geo-line"></span>
+        {/* Vertical Word - Far Left (organic) */}
+        <div className="bonsai-vertical-text-wrap" aria-hidden="true">
+          <span className="bonsai-vertical-text">organic</span>
         </div>
 
-        {/* Vertical Brand Text - Left Side Column */}
-        <div className="bonsai-vertical-text-wrap">
-          <div className="bonsai-vertical-text">organic</div>
-        </div>
-
-        {/* Left Content */}
+        {/* Left-Middle Editorial Content */}
         <motion.div
           className="bonsai-left-content"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.08 }}
+          style={{ y: heroY }}
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
         >
           <div className="bonsai-heading-group">
-            <span className="bonsai-kicker">FRESH DAIRY</span>
             <h1 className="bonsai-h1">
-              <span className="bonsai-h1-large">FARM<br />FRESH</span>
+              <span className="bonsai-h1-large">THE ART</span>
               <span className="bonsai-h1-line"></span>
-              <span className="bonsai-h1-sub">DAIRY, DELIVERED DAILY</span>
+              <span className="bonsai-h1-sub">OF PURE DAIRY</span>
             </h1>
           </div>
 
           <p className="bonsai-desc">
-            Creamy milk, cultured yogurt, and handcrafted butter from farms that put freshness first.
+            Farm-fresh dairy, traditionally prepared and delivered with purity at its heart. From fresh A2 milk to handcrafted Bilona ghee, every product begins at the farm.
           </p>
 
           <motion.button
             className="bonsai-explore-btn"
             onClick={handleExplore}
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
+            whileHover={{ scale: 1.03, backgroundColor: '#0F3A20' }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.2 }}
           >
-            Shop dairy
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '6px' }}>
-              <path d="M5 12h14M13 6l6 6-6 6"/>
-            </svg>
+            explore &rarr;
           </motion.button>
         </motion.div>
 
-        {/* Right Image Stage */}
-        <motion.div
-          className="bonsai-right-stage"
-          initial={{ opacity: 0, scale: 0.96, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.16 }}
-        >
-          {/* Background Card */}
-          <div className="bonsai-stage-bg bonsai-parallax-stage"></div>
+        {/* Right Product Composition Stage */}
+        <div className="bonsai-right-stage">
+          {/* Pale grey-green horizontal architectural band behind product */}
+          <div className="bonsai-architectural-band" aria-hidden="true"></div>
 
-          {/* Product Relative Container */}
-          <div className="bonsai-product-container bonsai-parallax-image">
-            {/* Single Pedestal Image Mockup */}
+          {/* Oversized white architectural 01 behind product */}
+          <motion.div 
+            className="bonsai-numeral-01" 
+            aria-hidden="true"
+            style={{ y: numeralY }}
+          >
+            01
+          </motion.div>
+
+          {/* Product Cutout Sits Directly on Canvas (No rounded card, no box shadow) */}
+          <motion.div 
+            className="bonsai-product-container bonsai-parallax-image"
+            style={{ y: productY }}
+            initial={{ opacity: 0, scale: 0.96, y: 30 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+          >
             <img
-              src="./img/dairy-hero-vc-panel.png"
-              alt="Fresh milk, yogurt, and butter from VC Organic Farms"
-              className="bonsai-product-img-single"
+              src="./img/dairy-hero-cutout.png"
+              alt="VC Organic Farms Pure A2 Desi Cow Milk and Handcrafted Bilona Ghee on Stone Pedestal"
+              className="bonsai-product-cutout"
+              loading="eager"
             />
-          </div>
-          <div className="bonsai-oval-stage" aria-hidden="true"></div>
 
-          {/* Product Type Labels at Bottom */}
-          <div className="bonsai-product-labels" style={{ marginTop: '24px' }}>
-            <div className="bonsai-label-item">
-              <span className="label-dot"></span>
-              <span className="label-text">Farm fresh</span>
+            {/* Subtle Elliptical Orbit Line at base of product */}
+            <svg 
+              className="bonsai-orbit-ellipse" 
+              viewBox="0 0 540 100" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <ellipse cx="270" cy="50" rx="250" ry="42" stroke="#1a1a1a" strokeWidth="1.2" />
+            </svg>
+
+            {/* Center Selector Indicator (- 0 -) */}
+            <div className="bonsai-selector-indicator" aria-hidden="true">
+              <span className="selector-dash"></span>
+              <span className="selector-dot">0</span>
+              <span className="selector-dash"></span>
             </div>
-            <div className="bonsai-label-item">
-              <span className="label-dot"></span>
-              <span className="label-text">Delivered daily</span>
+          </motion.div>
+
+          {/* Beneath Product Selector & Labels with Minimal Dots and Arrows */}
+          <div className="bonsai-product-labels-nav">
+            <button 
+              className="bonsai-nav-arrow bonsai-prev-arrow" 
+              onClick={prevProduct}
+              aria-label="Previous dairy product"
+            >
+              &larr;
+            </button>
+
+            <div className="bonsai-product-labels">
+              {products.map((p, idx) => (
+                <button
+                  key={p.id}
+                  className={`bonsai-label-item ${idx === activeProductIdx ? 'active' : ''}`}
+                  onClick={() => setActiveProductIdx(idx)}
+                >
+                  <span className="label-bullet">&bull;</span>
+                  <span className="label-text">{p.name}</span>
+                </button>
+              ))}
             </div>
+
+            <button 
+              className="bonsai-nav-arrow bonsai-next-arrow" 
+              onClick={nextProduct}
+              aria-label="Next dairy product"
+            >
+              &rarr;
+            </button>
           </div>
-          <div className="bonsai-mini-controls" aria-hidden="true">
-            <span></span>
-            <strong></strong>
-            <span></span>
-          </div>
-        </motion.div>
+        </div>
       </div>
 
-      {/* Bottom Right Arrow/Down indicator */}
-      <motion.div
-        className="bonsai-down-arrow"
-        animate={{ y: [0, 6, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        onClick={() => window.scrollBy({ top: window.innerHeight * 0.8, behavior: 'smooth' })}
+      {/* Bottom Right Minimal Action Indicator */}
+      <motion.button
+        className="bonsai-bottom-right-action"
+        onClick={() => window.scrollBy({ top: window.innerHeight * 0.85, behavior: 'smooth' })}
+        aria-label="Scroll to explore products"
+        animate={{ y: [0, 5, 0] }}
+        transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M6 9l6 6 6-6"/>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="18" cy="5" r="3" />
+          <circle cx="6" cy="12" r="3" />
+          <circle cx="18" cy="19" r="3" />
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
         </svg>
-      </motion.div>
+      </motion.button>
     </motion.section>
   );
 };
