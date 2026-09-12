@@ -44,7 +44,7 @@ $$('input[type=date]').forEach(i=>{const now=new Date();now.setMinutes(now.getMi
   const lines=['VC Organic Farms — Farm Order & Enquiry',''];
   for(const [key,value] of new FormData(form))if(String(value).trim())lines.push(`${key}: ${value}`);
   lines.push('','Please confirm product availability and doorstep delivery details.');
-  window.open('https://wa.me/919947478328?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
+  window.open('https://wa.me/918050065491?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
 }));
 
 $$('[data-filter]').forEach(b=>b.addEventListener('click',()=>{

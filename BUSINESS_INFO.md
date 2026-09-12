@@ -28,9 +28,9 @@ This document contains all business information gathered from [https://vcorganic
 ## 2. Contact & Location Info
 
 - **Farm Address**: Organic Farm, Karnataka, India
-- **Phone / Call**: +91 7892397382
-- **WhatsApp Support**: +91 7892397382 ([wa.me/917892397382](https://wa.me/917892397382))
-- **Email**: info@vcorganicfarms.com
+- **Phone / Call**: +91 80500 65491
+- **WhatsApp Support**: +91 80500 65491 ([wa.me/918050065491](https://wa.me/918050065491?lang=en))
+- **Email**: vcorganicfarms@gmail.com
 - **Website Credits**: Designed & Created by AIAVRO.COM
 
 ---
