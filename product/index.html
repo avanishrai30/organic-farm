@@ -1,543 +1,528 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" id="top">
 <head>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
   <title>Product Details | VC Organic Farms</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  
-  <!-- Main shared CSS -->
-  <link href="../css/ampul.webflow.shared.aefc512af.css" rel="stylesheet" type="text/css"/>
-<link href="../css/brand-kit.css?v=2.00" rel="stylesheet" type="text/css"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="../js/animations.js?v=2.00"></script>
-  
-  <!-- Custom Product Details CSS -->
-  <link href="../css/product-detail.css" rel="stylesheet" type="text/css"/>
-  
-  <!-- Brand Kit Styling Override -->
-  
-  <!-- Product Database -->
+  <meta name="description" content="Pure, chemical-free farm fresh dairy, A2 Desi Cow Milk, hand-churned Bilona Ghee, and organic pantry staples from VC Organic Farms.">
+  <link rel="icon" href="../img/logo icon.png" type="image/png">
+  <link rel="stylesheet" href="../fonts.css">
+  <link rel="stylesheet" href="../design.css">
+  <script defer src="../assets/vendor/gsap.min.js"></script>
+  <script defer src="../assets/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="../assets/vendor/lenis.min.js"></script>
+  <script defer src="../design.js"></script>
   <script src="../js/products-data.js"></script>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    WebFont.load({
-      google: {
-        families: [
-          "Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic",
-          "DM Sans:300,400,500,600,700",
-          "Inter:300,400,500,600,700",
-          "Cinzel:500,600,700,800"
-        ]
-      }
-    });
-  </script>
-<style>.w-webflow-badge { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; left: -9999px !important; }</style></head>
-<body>
-<div class="page-wrapper">
-  <!-- Header Component -->
-  <div class="header-milk-wave">
-  <svg viewBox="0 0 1440 140" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width: 100%; height: 100%; display: block;">
-    <path d="M0,0 Q180,95 360,65 T720,85 T1080,55 T1440,75 L1440,0 L0,0 Z" fill="#FFFFFF"/>
-    <path d="M0,0 Q180,80 360,50 T720,70 T1080,40 T1440,60 L1440,0 L0,0 Z" fill="rgba(250, 248, 244, 0.7)"/>
-  </svg>
-</div>
-<div data-animation="over-right" class="header-section w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-duration="400">
-    <div class="container-default _1880 w-container">
-      <div class="header-block">
-        <a href="../index.html" class="header-brand w-inline-block">
-          <img src="../img/logo icon.png" loading="eager" alt="VC Organic Logo" class="header-brand-logo"/>
-          <div class="brand-text-block">
-            <span class="brand-text-title">VC ORGANIC</span>
-            <span class="brand-text-subtitle">FARMS</span>
+</head>
+<body class="inner-page">
+  <a class="skip" href="#content">Skip to content</a>
+
+  <!-- Floating Header (Kerala Design System) -->
+  <header class="header">
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="menu-label">Menu</span>
+    </button>
+    <a class="brand" href="../index.html" aria-label="VC Organic Farms home">
+      <strong>VC Organic</strong>
+      <small>FARMS &amp; DAIRY</small>
+    </a>
+    <a class="nav-cta" href="../index.html#subscription">
+      Order Fresh Dairy <span aria-hidden="true">↗</span>
+    </a>
+    <nav id="mobile-menu" aria-label="Site navigation" hidden>
+      <a href="../index.html">Home</a>
+      <a href="../products/index.html">Fresh Dairy Products</a>
+      <a href="../index.html#subscription">Daily Subscription</a>
+      <a href="../index.html#tradition">Our Heritage &amp; Ahimsa</a>
+      <a href="../index.html#gallery">Farm Gallery</a>
+      <a href="../index.html#routes">Delivery Routes</a>
+      <a href="../blog/index.html">Dairy Journal</a>
+      <a href="../about/index.html">About VC Organics</a>
+      <a href="../contact/index.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <!-- Breadcrumbs & Category Intro -->
+    <section class="page-intro wrap product-intro">
+      <span class="eyebrow" data-reveal>
+        <span aria-hidden="true">✳</span>
+        <a href="../index.html">Home</a> &nbsp;/&nbsp;
+        <a href="../products/index.html">Products</a> &nbsp;/&nbsp;
+        <span id="breadcrumb-title">Fresh A2 Desi Cow Milk</span>
+        <span aria-hidden="true">✳</span>
+      </span>
+    </section>
+
+    <!-- Product Showcase Hero -->
+    <section class="section wrap" style="padding-top: 20px; padding-bottom: 60px;">
+      <div class="product-hero-layout">
+        <!-- Left: Image Stage & Purity Badges -->
+        <div class="product-gallery" data-reveal>
+          <div class="product-photo-stage">
+            <span class="tag" id="product-badge">Bestseller</span>
+            <img id="product-main-img" src="../img/milk_bottle_mockup.png" alt="Product Image">
           </div>
-        </a>
-        <div class="header-menu">
-          <nav role="navigation" class="header-menu-block w-nav-menu">
-            <div class="header-nav-wrap"><a href="../index.html" class="nav-link w-nav-link">Home</a><a href="../about/index.html" class="nav-link w-nav-link">About</a><a href="../products/index.html" class="nav-link w-nav-link">Products</a><a href="../blog/index.html" class="nav-link w-nav-link">Journal</a><a href="../contact/index.html" class="nav-link w-nav-link">Contact</a></div></nav>
-          <div class="header-button-block">
-            <a href="https://wa.me/917892397382" target="_blank" class="header-icon w-inline-block" style="color: #25d366; display: flex; align-items: center; justify-content: center;">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.666.988 3.396 1.472 5.35 1.473 5.385.002 9.768-4.38 9.77-9.767.002-2.61-1.01-5.062-2.852-6.905C17.022 2.11 14.577.808 11.994.808c-5.392 0-9.777 4.383-9.78 9.771-.001 2.012.522 3.823 1.517 5.485L2.73 21.085l5.067-1.332zM18.156 14.77c-.337-.17-2.001-.988-2.31-1.101-.31-.113-.536-.17-.761.17-.224.339-.87 1.102-1.066 1.328-.198.225-.395.253-.732.085-.337-.17-1.424-.525-2.713-1.675-.999-.89-1.674-1.99-1.87-2.33-.197-.337-.02-.52.148-.688.153-.153.338-.395.507-.593.169-.197.225-.338.338-.564.112-.224.056-.422-.028-.592-.085-.17-.761-1.834-1.042-2.51-.274-.66-.55-.57-.761-.58-.197-.008-.423-.01-.649-.01-.225 0-.591.085-.9.423-.309.337-1.182 1.157-1.182 2.819 0 1.66 1.209 3.26 1.378 3.487.169.225 2.38 3.634 5.765 5.097.805.348 1.433.555 1.923.712.809.257 1.545.221 2.13.134.65-.098 2.002-.818 2.282-1.606.282-.788.282-1.464.198-1.606-.084-.14-.31-.226-.647-.396z"/></svg>
+          <div class="product-thumbs" id="product-thumbs-list">
+            <!-- Dynamic thumbnails -->
+          </div>
+
+          <div class="product-purity-badges">
+            <div class="purity-badge-card">
+              <span>🐄</span>
+              <strong>100% Gir Cows<br><small style="color:var(--muted)">Pure A2 Ahimsa</small></strong>
+            </div>
+            <div class="purity-badge-card">
+              <span>🌿</span>
+              <strong>Zero Chemicals<br><small style="color:var(--muted)">No Hormones</small></strong>
+            </div>
+            <div class="purity-badge-card">
+              <span>❄️</span>
+              <strong>Chilled at 4°C<br><small style="color:var(--muted)">Glass Bottled</small></strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Editorial Details, Pricing, Size & Order CTAs -->
+        <div class="product-info-panel" data-reveal>
+          <div>
+            <span class="eyebrow" id="product-category-tag" style="margin-bottom: 14px;"><span aria-hidden="true">✳</span> A2 Milk &amp; Curd <span aria-hidden="true">✳</span></span>
+            <h1 id="product-heading">Fresh A2<br><em>Desi Cow Milk</em></h1>
+          </div>
+
+          <p class="product-lead-desc" id="product-desc">
+            Pure raw A2 milk from indigenous Gir cows, chilled immediately after morning milking and sealed in glass bottles. Delivered fresh every dawn.
+          </p>
+
+          <div class="product-price-box">
+            <strong class="price-large" id="product-price">₹110</strong>
+            <span class="price-unit" id="product-unit">/ 1 Litre</span>
+            <span class="price-orig" id="product-orig-price">₹120</span>
+            <span class="price-save" id="product-save-badge">Save ₹10</span>
+          </div>
+
+          <!-- Size / Pack Selector -->
+          <div class="size-selection-block" id="size-selector-wrap">
+            <label>Select Quantity / Pack Size:</label>
+            <div class="size-pill-group" id="size-pills-container">
+              <!-- Dynamically populated size pills -->
+            </div>
+          </div>
+
+          <!-- Quantity Stepper & Action CTAs -->
+          <div class="order-action-row">
+            <div class="qty-stepper" aria-label="Quantity selector">
+              <button class="qty-step-btn" id="qty-minus" aria-label="Decrease quantity">−</button>
+              <span class="qty-step-val" id="qty-display">1</span>
+              <button class="qty-step-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+            </div>
+
+            <a class="button" id="whatsapp-order-btn" href="#" target="_blank" rel="noopener">
+              Order on WhatsApp <span aria-hidden="true">↗</span>
+            </a>
+
+            <a class="button secondary" href="../index.html#subscription">
+              Daily Subscription <span aria-hidden="true">↗</span>
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Main Wrapper -->
-  <main class="main-wrapper">
-    
-    <!-- Breadcrumbs Section -->
-    <section class="global-section" style="padding-top: 20px; padding-bottom: 20px;">
-      <div class="w-layout-blockcontainer container-default w-container">
-        <div class="section-info" style="opacity: 1; transform: none; display: flex; align-items: center; gap: 8px;">
-          <a href="../index.html" class="section-info-text link">Home</a>
-          <div class="section-info-line"></div>
-          <a href="../products/index.html" class="section-info-text link">Products</a>
-          <div class="section-info-line"></div>
-          <div class="section-info-text active" id="breadcrumb-current-product">Product Details</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Product Detail Main View -->
-    <section class="product-details-wrapper">
-      <div class="w-layout-blockcontainer container-default w-container">
-        
-        <div class="product-grid">
-          <!-- Left Column: Image Gallery -->
-          <div class="gallery-container">
-            <div class="main-image-viewport">
-              <img id="main-product-img" src="../img/mil bottle.png" alt="Product Image"/>
-            </div>
-            <div class="thumbnails-list" id="gallery-thumbnails">
-              <!-- JS will populate thumbnails here -->
-            </div>
-          </div>
-
-          <!-- Right Column: Product Specs & Actions -->
-          <div class="info-container">
+          <!-- Morning Delivery Assurance -->
+          <div class="delivery-notice-box">
+            <span class="notice-icon" aria-hidden="true">🚚</span>
             <div>
-              <span class="product-category" id="product-category">Dairy Products</span>
-              <div class="product-header-block">
-                <div class="product-title-row">
-                  <h1 class="product-title" id="product-title">Fresh A2 Desi Cow Milk</h1>
-                  <span class="badge-instock" id="product-badge">Bestseller</span>
-                </div>
-                <div class="rating-row">
-                  <div class="stars-container">
-                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                  </div>
-                  <span class="reviews-count" id="product-rating-text">4.9 (245 Reviews)</span>
-                </div>
-              </div>
-              
-              <div class="price-row">
-                <span class="price-current" id="product-price-current">₹80</span>
-                <span class="price-original" id="product-price-original">₹90</span>
-              </div>
+              <strong>Morning Doorstep Delivery by 7:00 AM</strong>
+              <p>Chilled cold-chain delivery in sanitized glass bottles. Available for daily scheduled drop or single order across your neighborhood.</p>
             </div>
-
-            <p class="product-desc-short" id="product-desc-short">
-              Pure raw A2 Desi Cow Milk from indigenous Gir cows, delivered farm-fresh every morning. Rich in natural nutrients, easy to digest, and full of natural vitamins.
-            </p>
-
-            <!-- Size Options -->
-            <div>
-              <div class="section-title-small">Select Size/Volume</div>
-              <div class="size-options" id="size-options-container">
-                <!-- JS will populate size options here -->
-              </div>
-            </div>
-
-            <!-- Quantity & Actions -->
-            <div class="actions-box">
-              <div class="quantity-add-row">
-                <div class="quantity-selector">
-                  <button type="button" class="qty-btn" onclick="adjustQty(-1)">−</button>
-                  <input type="number" id="purchase-qty" class="qty-input" value="1" min="1" onchange="validateQty()"/>
-                  <button type="button" class="qty-btn" onclick="adjustQty(1)">+</button>
-                </div>
-                <button type="button" class="btn-add-to-cart" onclick="addToCart()">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                  <span>Add To Cart</span>
-                </button>
-              </div>
-
-              <!-- Order on WhatsApp -->
-              <a href="#" id="btn-whatsapp" class="btn-whatsapp-order" target="_blank">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.666.988 3.396 1.472 5.35 1.473 5.385.002 9.768-4.38 9.77-9.767.002-2.61-1.01-5.062-2.852-6.905C17.022 2.11 14.577.808 11.994.808c-5.392 0-9.777 4.383-9.78 9.771-.001 2.012.522 3.823 1.517 5.485L2.73 21.085l5.067-1.332zM18.156 14.77c-.337-.17-2.001-.988-2.31-1.101-.31-.113-.536-.17-.761.17-.224.339-.87 1.102-1.066 1.328-.198.225-.395.253-.732.085-.337-.17-1.424-.525-2.713-1.675-.999-.89-1.674-1.99-1.87-2.33-.197-.337-.02-.52.148-.688.153-.153.338-.395.507-.593.169-.197.225-.338.338-.564.112-.224.056-.422-.028-.592-.085-.17-.761-1.834-1.042-2.51-.274-.66-.55-.57-.761-.58-.197-.008-.423-.01-.649-.01-.225 0-.591.085-.9.423-.309.337-1.182 1.157-1.182 2.819 0 1.66 1.209 3.26 1.378 3.487.169.225 2.38 3.634 5.765 5.097.805.348 1.433.555 1.923.712.809.257 1.545.221 2.13.134.65-.098 2.002-.818 2.282-1.606.282-.788.282-1.464.198-1.606-.084-.14-.31-.226-.647-.396z"/></svg>
-                <span>Order on WhatsApp</span>
-              </a>
-            </div>
-
-            <!-- Pincode Validator -->
-            <div class="pincode-section">
-              <div class="section-title-small" style="margin-bottom: 4px;">Pincode Delivery Check</div>
-              <div style="font-size: 12px; color: #666666;">Check if delivery is available in your area.</div>
-              <div class="pincode-input-row">
-                <input type="text" id="pincode-input-field" class="pincode-input" placeholder="Enter 6-digit pincode" maxlength="6" oninput="this.value = this.value.replace(/[^0-9]/g, '')"/>
-                <button type="button" class="pincode-btn" onclick="checkPincode()">Check</button>
-              </div>
-              <div id="pincode-status" class="pincode-msg"></div>
-            </div>
-
-            <!-- Meta Data tags -->
-            <div class="metadata-list">
-              <div class="metadata-item"><strong>Category:</strong> <span id="meta-category">Dairy Products</span></div>
-              <div class="metadata-item"><strong>SKU:</strong> <span id="meta-sku">VC-DAIRY-01</span></div>
-              <div class="metadata-item"><strong>Tags:</strong> <span id="meta-tags">Fresh, Organic, Pure, Gir Cow A2</span></div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Middle Section: Tabs -->
-        <div class="details-tabs-container">
-          <div class="tabs-nav-bar">
-            <button type="button" class="tab-nav-btn active" onclick="switchDetailTab('tab-desc', this)">Description</button>
-            <button type="button" class="tab-nav-btn" onclick="switchDetailTab('tab-specs', this)">Additional Information</button>
-            <button type="button" class="tab-nav-btn" onclick="switchDetailTab('tab-reviews', this)">Reviews (4.9★)</button>
-          </div>
-
-          <div id="tab-desc" class="tab-pane-content active">
-            <div id="product-overview-content">
-              <!-- Filled dynamically -->
-            </div>
-          </div>
-
-          <div id="tab-specs" class="tab-pane-content">
-            <table class="spec-table">
-              <tbody id="product-specifications-table">
-                <!-- Filled dynamically -->
-              </tbody>
-            </table>
-          </div>
-
-          <div id="tab-reviews" class="tab-pane-content">
-            <div class="reviews-tab-box" id="product-reviews-box">
-              <!-- Filled dynamically -->
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Related Products Section -->
-    <section class="global-section" style="background-color: var(--color-bg-light); padding-top: 60px; padding-bottom: 80px;">
-      <div class="w-layout-blockcontainer container-default w-container">
-        <h2 style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 32px; color: var(--color-primary); margin-bottom: 30px;">Explore Related Products</h2>
-        <div class="products-list-wrapper w-dyn-list">
-          <div role="list" class="products-list w-dyn-items" id="related-products-list" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;">
-            <!-- Populate dynamically -->
           </div>
         </div>
       </div>
     </section>
 
+    <!-- The 4 Sacred Pillars (Tilted Stamps) -->
+    <section class="section wrap promise" style="padding-top: 20px;">
+      <div class="section-heading center" data-reveal>
+        <span class="eyebrow"><span aria-hidden="true">✳</span> The VC Organics promise <span aria-hidden="true">✳</span></span>
+        <h2>Pure by Nature.<br>Honest by <em>Tradition.</em></h2>
+      </div>
+      <div class="stamps">
+        <div class="stamp-wrap">
+          <div class="stamp lemon" data-stamp>
+            <span class="stamp-number">✳ 01 ✳</span>
+            <strong>A2 Gir Cows<br><em>Naturally Raised</em></strong>
+            <small>Free-grazing Desi cows</small>
+          </div>
+        </div>
+        <div class="stamp-wrap">
+          <div class="stamp peach" data-stamp>
+            <span class="stamp-number">✳ 02 ✳</span>
+            <strong>Bilona Churned<br><em>Wood Firewood</em></strong>
+            <small>Sacred Vedic clay pots</small>
+          </div>
+        </div>
+        <div class="stamp-wrap">
+          <div class="stamp pink" data-stamp>
+            <span class="stamp-number">✳ 03 ✳</span>
+            <strong>Morning Raw<br><em>Glass Bottled</em></strong>
+            <small>Chilled immediately</small>
+          </div>
+        </div>
+        <div class="stamp-wrap">
+          <div class="stamp sage" data-stamp>
+            <span class="stamp-number">✳ 04 ✳</span>
+            <strong>Doorstep<br><em>Every Dawn</em></strong>
+            <small>Delivered by 7:00 AM</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Specifications & Vedic Story -->
+    <section class="section wrap product-specs-section">
+      <div class="product-specs-grid">
+        <div class="spec-box" data-reveal>
+          <span class="eyebrow"><span aria-hidden="true">✳</span> Vedic Farm Heritage <span aria-hidden="true">✳</span></span>
+          <h3 id="story-heading">Sacred Gau Seva &amp; Purity</h3>
+          <div id="product-overview-body">
+            <p>Our produce follows traditional Vedic principles of cow care (Gau Seva). Indigenous cows are allowed to nurse their calves first before any milk is collected, adhering strictly to Ahimsa practices.</p>
+          </div>
+        </div>
+
+        <div class="spec-box" data-reveal>
+          <span class="eyebrow"><span aria-hidden="true">✳</span> Pure Ingredients &amp; Facts <span aria-hidden="true">✳</span></span>
+          <h3>Product Specifications</h3>
+          <table class="spec-table">
+            <tbody id="product-spec-table-body">
+              <!-- Dynamically populated specs -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verified Customer Reviews -->
+    <section class="section wrap" style="padding-top: 10px; padding-bottom: 70px;">
+      <div class="section-heading center" data-reveal>
+        <span class="eyebrow"><span aria-hidden="true">✳</span> What families say <span aria-hidden="true">✳</span></span>
+        <h2>Loved by homes that cherish<br><em>authentic purity.</em></h2>
+      </div>
+
+      <div class="reviews-editorial-grid" id="product-reviews-container" data-reveal>
+        <!-- Dynamic reviews -->
+      </div>
+    </section>
+
+    <!-- Related Farm Produce (Cards Matching Homepage) -->
+    <section class="section wrap" id="related-products-section">
+      <div class="section-heading" data-reveal>
+        <span class="eyebrow"><span aria-hidden="true">✳</span> Explore More Produce <span aria-hidden="true">✳</span></span>
+        <h2>Other staples from<br>our <em>morning farm.</em></h2>
+        <p>100% natural, ethical, and organic essentials crafted with traditional slow methods.</p>
+      </div>
+
+      <div class="cards" id="related-cards-container">
+        <!-- Dynamically populated related cards -->
+      </div>
+    </section>
+
+    <!-- Scalloped Marquee Ribbon -->
+    <section class="ribbon" aria-label="VC Organic Farm Values">
+      <div class="ribbon-track">
+        <span>A2 Gir Milk</span><b>✳</b>
+        <span><em>Bilona Ghee</em></span><b>✳</b>
+        <span>Artisanal Paneer</span><b>✳</b>
+        <span><em>Wood Pressed Oils</em></span><b>✳</b>
+        <span>A2 Gir Milk</span><b>✳</b>
+        <span><em>Bilona Ghee</em></span><b>✳</b>
+        <span>Artisanal Paneer</span><b>✳</b>
+        <span><em>Wood Pressed Oils</em></span><b>✳</b>
+      </div>
+      <div class="ribbon-note">100% PURE DESI COW DAIRY · SACRED AHIMSA PRACTICES · DAILY DOORSTEP FRESHNESS</div>
+    </section>
   </main>
 
-  <!-- Footer Component -->
-  <section class="footer-section">
-    <div class="section-gap top-gap">
-      <div class="w-layout-blockcontainer container-default _1520 w-container">
-        <div class="footer-block">
-          <div class="footer-navigation-block">
-            <div class="footer-cta-block">
-              <div class="footer-title">Stay Connected &amp; Stay Healthy – Pure Organics</div>
-              <div class="footer-form-block w-form">
-                <form id="wf-form-Newsletter" name="wf-form-Newsletter" class="footer-form">
-                  <input class="footer-field w-input" placeholder="Your email address" type="email" required=""/>
-                  <div class="footer-button">
-                    <a href="#" class="button primary w-inline-block"><div class="button-text"><div class="default-text">Subscribe</div><div class="hover-text">Subscribe</div></div></a>
-                  </div>
-                </form>
-              </div>
-            </div>
-            
-            <div class="footer-nav-block">
-              <h6 class="footer-subtitle">Links</h6>
-              <div class="footer-nav-wrap">
-                <a href="../index.html" class="footer-nav-link">Home</a>
-                <a href="../about/index.html" class="footer-nav-link">About</a>
-                <a href="../products/index.html" class="footer-nav-link">Products</a>
-                <a href="../contact/index.html" class="footer-nav-link">Contact</a>
-              </div>
-            </div>
-
-            <div class="footer-info-block">
-              <div class="footer-title">Emergency Cow Rescue &amp; Gau Seva</div>
-              <div class="footer-info-wrap">
-                <div class="footer-info-card">
-                  <h6 class="footer-info-text">+91 7892397382</h6>
-                  <a href="tel:+917892397382" class="footer-info-icon w-inline-block">📞</a>
-                </div>
-                <div class="footer-info-card">
-                  <h6 class="footer-info-text">info@vcorganicfarms.com</h6>
-                  <a href="mailto:info@vcorganicfarms.com" class="footer-info-icon w-inline-block">✉</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="footer-watermark-block">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1300 200" fill="none" class="footer-watermark">
-              <text x="50%" y="70%" text-anchor="middle" font-family="'Cinzel', 'Playfair Display', Georgia, serif" font-weight="800" font-size="155" letter-spacing="6" fill="currentColor">VC ORGANIC'S</text>
-            </svg>
-          </div>
-
-          <div class="footer-copyright-block">
-            <div class="footer-copy-text">Copyright © 2026 VC Organic Farms | Designed by <a href="https://aiavro.com" target="_blank" class="footer-copy-link">AIavro.com</a></div>
-          </div>
-        </div>
-      </div>
+  <!-- Atmospheric Closing Video Section -->
+  <section class="closing">
+    <video class="ambient-video" autoplay muted loop playsinline preload="metadata" poster="../assets/video/closing-poster.jpg" aria-label="Farm sunset pasturing" data-ambient>
+      <source src="../assets/video/closing-sunset.mp4" type="video/mp4">
+    </video>
+    <button class="video-toggle" aria-label="Pause background video" aria-pressed="false">Ⅱ <span>Pause film</span></button>
+    <div class="closing-content" data-reveal>
+      <span class="eyebrow"><span aria-hidden="true">✳</span> Taste the difference of sacred purity <span aria-hidden="true">✳</span></span>
+      <h2>Come taste the purity.<br>Cherish the <em>feeling.</em></h2>
+      <a class="button light" href="../index.html#subscription">Start your daily subscription <span aria-hidden="true">↗</span></a>
     </div>
   </section>
-</div>
 
-<!-- JS Database and dynamic renderer -->
-<script>
-  // Product Database is loaded from window.productsDb defined in /js/products-data.js
-  const productsDb = window.productsDb;
+  <!-- Editorial Footer -->
+  <footer class="footer wrap">
+    <div class="footer-top">
+      <a class="brand" href="../index.html">
+        <strong>VC Organic</strong>
+        <small>FARMS &amp; DAIRY</small>
+      </a>
+      <p>Sacred traditions. Vedic cow care.<br>Pure organic dairy from our family to yours.</p>
+      <div>
+        <a href="tel:+917892397382">+91 78923 97382 ↗</a>
+        <a href="mailto:care@vcorganicfarms.com">care@vcorganicfarms.com ↗</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="../products/index.html">Dairy Products</a>
+      <a href="../index.html#subscription">Subscriptions</a>
+      <a href="../about/index.html">Our Heritage</a>
+      <a href="../blog/index.html">Dairy Journal</a>
+      <a href="../contact/index.html">Contact Farm</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VC Organic Farms · Lucknow &amp; Bangalore, India</span>
+      <span class="site-credit">100% Pure Vedic A2 Dairy &amp; Organic Pantry</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
 
-  // Populate dynamic data
-  let currentProduct = null;
-  let selectedSizeName = "";
-  let selectedSizePrice = 0;
+  <!-- Product Page Controller Script -->
+  <script>
+    (function() {
+      let currentProduct = null;
+      let selectedSize = '';
+      let selectedPrice = 0;
+      let qty = 1;
 
-  function loadProduct() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id') || 'fresh-organic-milk';
-    
-    // Look up in DB, fallback to milk
-    currentProduct = productsDb[productId];
-    if (!currentProduct) {
-      currentProduct = productsDb["fresh-organic-milk"];
-    }
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
 
-    // Set page text elements
-    document.title = currentProduct.name + " | VC Organic Farms";
-    document.getElementById("breadcrumb-current-product").innerText = currentProduct.name;
-    document.getElementById("product-category").innerText = currentProduct.category;
-    document.getElementById("product-title").innerText = currentProduct.name;
-    
-    const badgeEl = document.getElementById("product-badge");
-    if (currentProduct.badge) {
-      badgeEl.innerText = currentProduct.badge;
-      badgeEl.style.display = "inline-block";
-    } else {
-      badgeEl.style.display = "none";
-    }
+      function initProduct() {
+        const db = window.productsDb || {};
+        const pid = getQueryParam('id') || 'fresh-organic-milk';
+        currentProduct = db[pid] || db['fresh-organic-milk'];
+        if (!currentProduct) return;
 
-    // SKU & tags
-    document.getElementById("meta-sku").innerText = currentProduct.sku;
-    document.getElementById("meta-tags").innerText = currentProduct.tags;
-    document.getElementById("meta-category").innerText = currentProduct.category;
-    document.getElementById("product-desc-short").innerText = currentProduct.description;
+        // Title & metadata
+        document.title = currentProduct.name + ' | VC Organic Farms';
+        const breadcrumb = document.getElementById('breadcrumb-title');
+        if (breadcrumb) breadcrumb.textContent = currentProduct.name;
 
-    // Load Images
-    const mainImg = document.getElementById("main-product-img");
-    mainImg.src = currentProduct.images[0];
-    mainImg.alt = currentProduct.name;
+        const heading = document.getElementById('product-heading');
+        if (heading) {
+          const parts = currentProduct.name.split(' ');
+          if (parts.length > 2) {
+            heading.innerHTML = parts.slice(0, 2).join(' ') + '<br><em>' + parts.slice(2).join(' ') + '</em>';
+          } else {
+            heading.innerHTML = parts[0] + '<br><em>' + (parts[1] || '') + '</em>';
+          }
+        }
 
-    const thumbList = document.getElementById("gallery-thumbnails");
-    thumbList.innerHTML = "";
-    currentProduct.images.forEach((imgSrc, index) => {
-      const thumb = document.createElement("div");
-      thumb.className = "thumbnail-item" + (index === 0 ? " active" : "");
-      thumb.onclick = function() {
-        mainImg.src = imgSrc;
-        document.querySelectorAll(".thumbnail-item").forEach(t => t.classList.remove("active"));
-        thumb.classList.add("active");
-      };
-      thumb.innerHTML = `<img src="${imgSrc}" alt="${currentProduct.name} thumbnail"/>`;
-      thumbList.appendChild(thumb);
-    });
+        const categoryTag = document.getElementById('product-category-tag');
+        if (categoryTag) categoryTag.innerHTML = `<span aria-hidden="true">✳</span> ${currentProduct.category} <span aria-hidden="true">✳</span>`;
 
-    // Load Size Options
-    const sizeContainer = document.getElementById("size-options-container");
-    sizeContainer.innerHTML = "";
-    const sizeKeys = Object.keys(currentProduct.sizes);
-    
-    selectedSizeName = sizeKeys[0];
-    selectedSizePrice = currentProduct.sizes[selectedSizeName];
+        const desc = document.getElementById('product-desc');
+        if (desc) desc.textContent = currentProduct.description;
 
-    sizeKeys.forEach((sizeName, index) => {
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "size-btn" + (index === 0 ? " active" : "");
-      btn.innerText = sizeName;
-      btn.onclick = function() {
-        document.querySelectorAll(".size-btn").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        selectedSizeName = sizeName;
-        selectedSizePrice = currentProduct.sizes[sizeName];
-        updatePriceDisplay();
-      };
-      sizeContainer.appendChild(btn);
-    });
+        const badge = document.getElementById('product-badge');
+        if (badge) {
+          if (currentProduct.badge) {
+            badge.textContent = currentProduct.badge;
+            badge.style.display = 'inline-block';
+          } else {
+            badge.style.display = 'none';
+          }
+        }
 
-    updatePriceDisplay();
+        // Main image & gallery
+        const mainImg = document.getElementById('product-main-img');
+        if (mainImg) {
+          mainImg.src = currentProduct.images[0];
+          mainImg.alt = currentProduct.name;
+        }
 
-    // Tab Contents
-    document.getElementById("product-overview-content").innerHTML = currentProduct.overview;
+        const thumbsContainer = document.getElementById('product-thumbs-list');
+        if (thumbsContainer) {
+          thumbsContainer.innerHTML = '';
+          currentProduct.images.forEach((imgSrc, idx) => {
+            const btn = document.createElement('button');
+            btn.className = 'product-thumb-btn' + (idx === 0 ? ' active' : '');
+            btn.type = 'button';
+            btn.setAttribute('aria-label', `Thumbnail ${idx + 1}`);
+            btn.innerHTML = `<img src="${imgSrc}" alt="${currentProduct.name} view ${idx + 1}">`;
+            btn.addEventListener('click', () => {
+              if (mainImg) mainImg.src = imgSrc;
+              document.querySelectorAll('.product-thumb-btn').forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+            });
+            thumbsContainer.appendChild(btn);
+          });
+        }
 
-    // Specifications
-    const specTable = document.getElementById("product-specifications-table");
-    specTable.innerHTML = "";
-    for (let [key, val] of Object.entries(currentProduct.specifications)) {
-      const row = document.createElement("tr");
-      row.innerHTML = `<th>${key}</th><td>${val}</td>`;
-      specTable.appendChild(row);
-    }
+        // Sizes selector
+        const sizes = currentProduct.sizes || { "Standard Pack": currentProduct.price };
+        const sizeKeys = Object.keys(sizes);
+        selectedSize = sizeKeys[0];
+        selectedPrice = sizes[selectedSize];
 
-    // Reviews
-    const reviewsBox = document.getElementById("product-reviews-box");
-    reviewsBox.innerHTML = "";
-    currentProduct.reviews.forEach(r => {
-      const rItem = document.createElement("div");
-      rItem.className = "review-item";
-      let stars = "";
-      for(let i=0; i<r.stars; i++) stars += "★";
-      rItem.innerHTML = `
-        <div class="review-author-row">
-          <span class="review-author">${r.author}</span>
-          <span class="review-stars">${stars}</span>
-        </div>
-        <p class="review-text">"${r.text}"</p>
-      `;
-      reviewsBox.appendChild(rItem);
-    });
+        const pillsContainer = document.getElementById('size-pills-container');
+        if (pillsContainer) {
+          pillsContainer.innerHTML = '';
+          sizeKeys.forEach((sName, idx) => {
+            const btn = document.createElement('button');
+            btn.className = 'size-pill-btn' + (idx === 0 ? ' active' : '');
+            btn.type = 'button';
+            btn.innerHTML = `<strong>${sName}</strong> <small>₹${sizes[sName]}</small>`;
+            btn.addEventListener('click', () => {
+              selectedSize = sName;
+              selectedPrice = sizes[sName];
+              document.querySelectorAll('.size-pill-btn').forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+              updatePricing();
+            });
+            pillsContainer.appendChild(btn);
+          });
+        }
 
-    // Populate Related Products
-    loadRelatedProducts();
-  }
+        // Specifications
+        const specTableBody = document.getElementById('product-spec-table-body');
+        if (specTableBody && currentProduct.specifications) {
+          specTableBody.innerHTML = '';
+          for (const [key, val] of Object.entries(currentProduct.specifications)) {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<th>${key}</th><td>${val}</td>`;
+            specTableBody.appendChild(tr);
+          }
+        }
 
-  function updatePriceDisplay() {
-    const qty = parseInt(document.getElementById("purchase-qty").value) || 1;
-    const totalCurrent = selectedSizePrice * qty;
-    
-    // Calculate simple original comparison (12% higher)
-    const factor = currentProduct.originalPrice / currentProduct.price;
-    const totalOriginal = Math.round(selectedSizePrice * factor * qty);
+        // Overview / Story
+        const overviewEl = document.getElementById('product-overview-body');
+        if (overviewEl && currentProduct.overview) {
+          overviewEl.innerHTML = currentProduct.overview;
+        }
 
-    document.getElementById("product-price-current").innerText = "₹" + totalCurrent;
-    document.getElementById("product-price-original").innerText = "₹" + totalOriginal;
+        // Reviews
+        const reviewsContainer = document.getElementById('product-reviews-container');
+        if (reviewsContainer && currentProduct.reviews) {
+          reviewsContainer.innerHTML = '';
+          currentProduct.reviews.forEach(r => {
+            const card = document.createElement('div');
+            card.className = 'editorial-review-card';
+            let stars = '';
+            for (let i = 0; i < (r.stars || 5); i++) stars += '★';
+            card.innerHTML = `
+              <div class="review-stars-gold">${stars}</div>
+              <p>"${r.text}"</p>
+              <span class="review-meta-author">— ${r.author}</span>
+            `;
+            reviewsContainer.appendChild(card);
+          });
+        }
 
-    // Update WhatsApp link
-    updateWhatsAppLink(qty, totalCurrent);
-  }
+        // Related Products
+        loadRelatedProducts(pid);
 
-  function adjustQty(val) {
-    const input = document.getElementById("purchase-qty");
-    let currentVal = parseInt(input.value) || 1;
-    currentVal += val;
-    if (currentVal < 1) currentVal = 1;
-    input.value = currentVal;
-    updatePriceDisplay();
-  }
+        // Update pricing & link
+        updatePricing();
+      }
 
-  function validateQty() {
-    const input = document.getElementById("purchase-qty");
-    let val = parseInt(input.value);
-    if (isNaN(val) || val < 1) val = 1;
-    input.value = val;
-    updatePriceDisplay();
-  }
+      function updatePricing() {
+        const priceEl = document.getElementById('product-price');
+        const origPriceEl = document.getElementById('product-orig-price');
+        const unitEl = document.getElementById('product-unit');
+        const saveBadge = document.getElementById('product-save-badge');
+        const qtyDisplay = document.getElementById('qty-display');
 
-  function updateWhatsAppLink(qty, totalPrice) {
-    const waPhone = "917892397382"; // From BUSINESS_INFO.md
-    const text = `Hi VC Organic Farms! I would like to order:
-*Product:* ${currentProduct.name}
-*Size/Volume:* ${selectedSizeName}
-*Quantity:* ${qty}
-*Total Price:* ₹${totalPrice}
+        const totalPrice = selectedPrice * qty;
+        const factor = (currentProduct.originalPrice || selectedPrice * 1.1) / (currentProduct.price || selectedPrice);
+        const totalOrig = Math.round(selectedPrice * factor * qty);
+        const saved = Math.max(0, totalOrig - totalPrice);
 
-Please confirm availability and delivery slot. Thank you!`;
-    
-    const encodedText = encodeURIComponent(text);
-    document.getElementById("btn-whatsapp").href = `https://wa.me/${waPhone}?text=${encodedText}`;
-  }
+        if (priceEl) priceEl.textContent = '₹' + totalPrice.toLocaleString('en-IN');
+        if (origPriceEl) origPriceEl.textContent = '₹' + totalOrig.toLocaleString('en-IN');
+        if (unitEl) unitEl.textContent = `(${qty > 1 ? qty + ' × ' : ''}${selectedSize})`;
+        if (saveBadge) {
+          if (saved > 0) {
+            saveBadge.textContent = `Save ₹${saved}`;
+            saveBadge.style.display = 'inline-block';
+          } else {
+            saveBadge.style.display = 'none';
+          }
+        }
+        if (qtyDisplay) qtyDisplay.textContent = qty;
 
-  function checkPincode() {
-    const pin = document.getElementById("pincode-input-field").value.trim();
-    const msgEl = document.getElementById("pincode-status");
-    
-    if (pin.length !== 6) {
-      msgEl.className = "pincode-msg error";
-      msgEl.innerText = "✗ Please enter a valid 6-digit pincode.";
-      return;
-    }
+        // Update WhatsApp Order Link
+        const waBtn = document.getElementById('whatsapp-order-btn');
+        if (waBtn) {
+          const msg = `Hello VC Organic Farms, I would like to order:
 
-    // Sourced local delivery in Karnataka (e.g. Bangalore starting with 560xxx, etc.)
-    if (pin.startsWith("56")) {
-      msgEl.className = "pincode-msg success";
-      msgEl.innerText = "✓ Delivery Available! Estimated delivery: Next Morning (within 24 hours).";
-    } else {
-      msgEl.className = "pincode-msg success";
-      msgEl.innerText = "✓ Delivery Available! Dispatched via national courier (3-5 days delivery).";
-    }
-  }
+` +
+                      `*Product:* ${currentProduct.name}
+` +
+                      `*Pack Size:* ${selectedSize}
+` +
+                      `*Quantity:* ${qty}
+` +
+                      `*Total Price:* ₹${totalPrice.toLocaleString('en-IN')}
 
-  function addToCart() {
-    const qty = document.getElementById("purchase-qty").value;
-    alert(`Added to Cart: ${qty} x ${currentProduct.name} (${selectedSizeName})`);
-  }
+` +
+                      `Please confirm my delivery slot and dispatch details.`;
+          waBtn.href = `https://wa.me/917892397382?text=${encodeURIComponent(msg)}`;
+        }
+      }
 
-  function switchDetailTab(tabId, btnEl) {
-    // Nav active styles
-    document.querySelectorAll(".tab-nav-btn").forEach(btn => btn.classList.remove("active"));
-    btnEl.classList.add("active");
+      function loadRelatedProducts(currentId) {
+        const container = document.getElementById('related-cards-container');
+        if (!container) return;
+        container.innerHTML = '';
+        const db = window.productsDb || {};
+        let count = 0;
 
-    // Content active styles
-    document.querySelectorAll(".tab-pane-content").forEach(pane => pane.classList.remove("active"));
-    document.getElementById(tabId).classList.add("active");
-  }
+        for (const [id, prod] of Object.entries(db)) {
+          if (id === currentId) continue;
+          if (count >= 3) break;
 
-  function loadRelatedProducts() {
-    const listContainer = document.getElementById("related-products-list");
-    listContainer.innerHTML = "";
-    
-    let count = 0;
-    for (let [id, p] of Object.entries(productsDb)) {
-      if (id === currentProduct.id) continue; // Skip current
-      if (count >= 4) break; // Limit 4
-
-      const card = document.createElement("div");
-      card.className = "products-item w-dyn-item";
-      card.innerHTML = `
-        <div class="products-card card-22-style" style="cursor: pointer;" onclick="window.location.href='./index.html?id=${p.id}'">
-          <div class="card-22-header">
-            <div class="products-image-block">
-              <div class="card-22-badges">
-                <span class="card-22-tag-badge">${p.badge}</span>
-                <span class="card-22-logo-circle"><img src="../img/logo icon.png" alt="logo" /></span>
+          const card = document.createElement('a');
+          card.className = 'tour-card';
+          card.href = `./index.html?id=${prod.id}`;
+          card.setAttribute('data-category', prod.category);
+          card.innerHTML = `
+            <div class="card-photo">
+              <img src="${prod.images[0]}" alt="${prod.name}" loading="lazy" decoding="async">
+              <span class="tag ${prod.badge ? 'bestseller' : ''}">${prod.badge || 'Pure Farm'}</span>
+              <span class="card-arrow">↗</span>
+            </div>
+            <div class="card-body">
+              <h3>${prod.name}</h3>
+              <p>${prod.description}</p>
+              <div class="card-meta">
+                <span class="card-price">₹${prod.price}<small>/ unit</small></span>
+                <span class="card-btn">Explore Product ↗</span>
               </div>
-              <img alt="${p.name}" src="${p.images[0]}" class="products-image" style="height: 220px; width: 100%; object-fit: cover; border-radius: 12px 12px 0 0;"/>
             </div>
-            <div class="products-text-block" style="padding: 15px;">
-              <h3 class="products-name" style="font-size: 18px; margin: 0; font-family: 'DM Sans', sans-serif;">${p.name}</h3>
-              <div class="products-amount" style="font-size: 13px; color: var(--color-accent); font-weight: 500;">${p.category}</div>
-            </div>
-          </div>
-          <div class="card-22-footer" style="padding: 0 15px 15px 15px; display: flex; justify-content: space-between; align-items: center;">
-            <div class="card-22-price-pill" style="font-weight: 700; color: var(--color-primary);">₹${p.price}</div>
-            <span style="font-size: 13px; font-weight: 600; color: var(--color-accent);">View Details →</span>
-          </div>
-        </div>
-      `;
-      listContainer.appendChild(card);
-      count++;
-    }
-  }
+          `;
+          container.appendChild(card);
+          count++;
+        }
+      }
 
-  // Run on page load
-  document.addEventListener("DOMContentLoaded", loadProduct);
-</script>
+      // Quantity buttons
+      document.getElementById('qty-minus')?.addEventListener('click', () => {
+        if (qty > 1) {
+          qty--;
+          updatePricing();
+        }
+      });
+      document.getElementById('qty-plus')?.addEventListener('click', () => {
+        qty++;
+        updatePricing();
+      });
 
-<!-- Remove Webflow Branding Badge Globally -->
-<script>
-(function() {
-  function removeWebflow() {
-    var badges = document.querySelectorAll('.w-webflow-badge');
-    badges.forEach(function(b) {
-      b.remove();
-    });
-  }
-  removeWebflow();
-  window.addEventListener('load', removeWebflow);
-  document.addEventListener('DOMContentLoaded', removeWebflow);
-  setTimeout(removeWebflow, 500);
-  setTimeout(removeWebflow, 1000);
-  setTimeout(removeWebflow, 2000);
-  setTimeout(removeWebflow, 5000);
-})();
-</script>
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initProduct);
+      } else {
+        initProduct();
+      }
+    })();
+  </script>
 </body>
 </html>
