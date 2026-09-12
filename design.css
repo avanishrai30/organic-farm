@@ -563,3 +563,16 @@
   }
 }
 
+.journal-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.journal-card-link:hover .journal-image img {
+  transform: scale(1.04);
+}
+.journal-card-link:hover .text-link {
+  color: var(--color-ink, #0c2b1c);
+  text-decoration: underline;
+}
