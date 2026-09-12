@@ -13,9 +13,9 @@ window.productsDb = {
     sku: "VC-DAIRY-01",
     tags: "Fresh, Organic, Raw Milk, A2 Gir Cow",
     images: [
-      "../img/milk_bottle_mockup.png",
-      "https://vc-organics.milkmaster.co/uploads/product_images/32606-1748320382/27-05-2025-1349103829-1748320382.jpg",
-      "https://vc-organics.milkmaster.co/uploads/product_images/30136-1746198470/27-05-2025-97513951-1748320258.jpg"
+      "../img/cards/milk.jpg",
+      "../img/cards/curd.jpg",
+      "../img/cards/chaas.jpg"
     ],
     sizes: {
       "500 ml": 55,
@@ -50,7 +50,7 @@ window.productsDb = {
     sku: "VC-DAIRY-02",
     tags: "Desi Ghee, Bilona Ghee, A2 Ghee, Traditional",
     images: [
-      "../img/ghee_jar_mockup.png",
+      "../img/cards/ghee.jpg",
       "https://vc-organics.milkmaster.co/uploads/product_images/99393-1748361296/27-05-2025-1381894364-1748361296.jpg",
       "https://vc-organics.milkmaster.co/uploads/product_images/34121-1748361169/27-05-2025-716624550-1748361169.jpg"
     ],
@@ -88,8 +88,8 @@ window.productsDb = {
     sku: "VC-OILS-01",
     tags: "Wood Pressed, Groundnut Oil, Cold Pressed, Cooking Oil",
     images: [
-      "../img/oil_bottle_mockup.png",
-      "https://vc-organics.milkmaster.co/uploads/product_images/11391-1748359792/27-05-2025-371848763-1748359792.jpg",
+      "../img/cards/groundnut_oil.jpg",
+      "../img/cards/coconut_oil.jpg",
       "https://vc-organics.milkmaster.co/uploads/product_images/71707-1748359976/27-05-2025-1839394631-1748359976.jpg"
     ],
     sizes: {
@@ -127,7 +127,7 @@ window.productsDb = {
     sku: "VC-DAIRY-03",
     tags: "White Butter, Makhan, Hand Churned, Pure A2",
     images: [
-      "https://vc-organics.milkmaster.co/uploads/product_images/21942-1748360502/27-05-2025-1885836732-1748360502.jpg",
+      "../img/cards/butter.jpg",
       "https://vc-organics.milkmaster.co/uploads/product_images/8671-1748360408/27-05-2025-1311222117-1748360408.jpg",
       "https://vc-organics.milkmaster.co/uploads/product_images/50997-1748360633/27-05-2025-387971507-1748360633.jpg"
     ],
@@ -161,7 +161,7 @@ window.productsDb = {
     sku: "VC-DAIRY-04",
     tags: "Fresh Paneer, Cottage Cheese, A2 Paneer, Organic",
     images: [
-      "https://vc-organics.milkmaster.co/uploads/product_images/35415-1748319811/27-05-2025-971744645-1748319811.jpg",
+      "../img/cards/paneer.jpg",
       "https://vc-organics.milkmaster.co/uploads/product_images/82575-1748320035/27-05-2025-1621289144-1748320035.jpg",
       "https://vc-organics.milkmaster.co/uploads/product_images/65963-1748320142/27-05-2025-937479739-1748320142.jpg"
     ],
@@ -196,7 +196,7 @@ window.productsDb = {
     sku: "VC-GRAIN-01",
     tags: "Ragi, Finger Millet, Superfood, High Calcium",
     images: [
-      "../img/millets.png",
+      "../img/cards/millets.jpg",
       "https://images.unsplash.com/photo-1574316071802-0d684efa7bf5?q=80&w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=800&auto=format&fit=crop"
     ],
@@ -263,7 +263,7 @@ window.productsDb = {
     sku: "VC-OILS-02",
     tags: "Coconut Oil, Wood Pressed, Cold Pressed, Copra Oil",
     images: [
-      "https://vc-organics.milkmaster.co/uploads/product_images/81882-1757836755/14-09-2025-422955429-1757837513.jpeg",
+      "../img/cards/coconut_oil.jpg",
       "https://images.unsplash.com/photo-1622484211148-716598e04144?q=80&w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1625904838466-96b34a61405e?q=80&w=800&auto=format&fit=crop"
     ],
@@ -327,7 +327,7 @@ window.productsDb = {
     sku: "VC-DAIRY-05",
     tags: "Curd, Dahi, Yogurt, Probiotic, A2 Cow",
     images: [
-      "https://vc-organics.milkmaster.co/uploads/product_images/82765-1748320608/27-05-2025-1376215229-1748320608.jpg",
+      "../img/cards/curd.jpg",
       "https://vc-organics.milkmaster.co/uploads/product_images/21242-1748320808/27-05-2025-255265922-1748320808.jpg",
       "https://vc-organics.milkmaster.co/uploads/product_images/28091-1748259597/26-05-2025-771132628-1748259597.jpg"
     ],
@@ -361,7 +361,7 @@ window.productsDb = {
     sku: "VC-DAIRY-06",
     tags: "Buttermilk, Chaas, Hydration, Spiced, Probiotic",
     images: [
-      "https://vc-organics.milkmaster.co/uploads/product_images/33128-1748320991/27-05-2025-1836011957-1748320991.jpg",
+      "../img/cards/chaas.jpg",
       "https://vc-organics.milkmaster.co/uploads/product_images/84949-1748321140/27-05-2025-1953232507-1748321140.jpg",
       "https://images.unsplash.com/photo-1571244856353-fb5291b29a28?q=80&w=800&auto=format&fit=crop"
     ],
@@ -394,7 +394,7 @@ window.productsDb = {
     sku: "VC-GRAIN-02",
     tags: "Rice, Organic Rice, Unpolished Rice, Sona Masuri",
     images: [
-      "../img/rice bag.png",
+      "../img/cards/rice.jpg",
       "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?q=80&w=800&auto=format&fit=crop"
     ],
@@ -428,7 +428,7 @@ window.productsDb = {
     sku: "VC-SNACK-01",
     tags: "Seeds Mix, Superfood, Healthy Snack, Omega-3",
     images: [
-      "../img/seeds.png",
+      "../img/cards/seeds.jpg",
       "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?q=80&w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1606755962773-d324e0a13086?q=80&w=800&auto=format&fit=crop"
     ],
@@ -461,7 +461,7 @@ window.productsDb = {
     sku: "VC-SNACK-02",
     tags: "Dry Fruits, Almonds, Cashews, Raisins, Premium",
     images: [
-      "../img/nuts.png",
+      "../img/cards/dry_fruits.jpg",
       "https://images.unsplash.com/photo-1596560548464-f010549b84d7?q=80&w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=800&auto=format&fit=crop"
     ],
@@ -494,7 +494,7 @@ window.productsDb = {
     sku: "VC-SWEET-02",
     tags: "Wild Honey, Forest Honey, Raw Honey, Organic Sweetener",
     images: [
-      "../img/honey.png",
+      "../img/cards/honey.jpg",
       "https://images.unsplash.com/photo-1587049352846-4a222e784d38?q=80&w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=800&auto=format&fit=crop"
     ],
@@ -527,7 +527,7 @@ window.productsDb = {
     sku: "VC-SNACK-03",
     tags: "Makhana, Foxnuts, Roasted Snack, Gluten Free",
     images: [
-      "../img/foxnuts.png",
+      "../img/cards/makhana.jpg",
       "https://images.unsplash.com/photo-1600271886742-f049cd451bba?q=80&w=800&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=800&auto=format&fit=crop"
     ],
