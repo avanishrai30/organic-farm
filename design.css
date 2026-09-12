@@ -576,3 +576,114 @@
   color: var(--color-ink, #0c2b1c);
   text-decoration: underline;
 }
+
+/* ==========================================================================
+   Star Vector Icon System (Cross-Platform Mobile & Desktop Consistency)
+   Replaces Unicode asterisk (U+2733) with crisp SVG vector icons to strictly
+   prevent mobile OS emoji font substitution (such as Apple Color Emoji on iOS).
+   ========================================================================== */
+.star-icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.eyebrow .star-icon {
+  width: 12px;
+  height: 12px;
+  color: #b79058;
+}
+
+.hero .eyebrow .star-icon {
+  color: #8c7335;
+}
+
+.closing .eyebrow .star-icon {
+  color: var(--lemon);
+}
+
+.stamp-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.stamp-number .star-icon {
+  width: 9px;
+  height: 9px;
+  stroke-width: 2.2;
+  color: currentColor;
+}
+
+.ribbon-track b {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.ribbon-track b .star-icon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.4;
+  color: currentColor;
+}
+
+.cab-line {
+  display: inline-flex;
+  align-items: center;
+}
+
+.cab-line .star-icon {
+  width: 11px;
+  height: 11px;
+  stroke-width: 2.2;
+  color: #9b9f90;
+}
+
+.product-crumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-crumbs .star-icon {
+  width: 9px;
+  height: 9px;
+  stroke-width: 2;
+  opacity: 0.55;
+  color: currentColor;
+}
+
+/* Fallback override: in case any bare text ✳ or legacy span is rendered */
+.eyebrow > span[aria-hidden="true"]:not(:has(svg)) {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 12px !important;
+  height: 12px !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  color: transparent !important;
+  background-color: #b79058;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath stroke='%23000' stroke-width='2.2' stroke-linecap='round' d='M8 1.5v13M1.5 8h13M3.4 3.4l9.2 9.2M3.4 12.6l9.2-9.2'/%3E%3C/svg%3E") no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath stroke='%23000' stroke-width='2.2' stroke-linecap='round' d='M8 1.5v13M1.5 8h13M3.4 3.4l9.2 9.2M3.4 12.6l9.2-9.2'/%3E%3C/svg%3E") no-repeat center / contain;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.hero .eyebrow > span[aria-hidden="true"]:not(:has(svg)) {
+  background-color: #8c7335;
+}
+
+.closing .eyebrow > span[aria-hidden="true"]:not(:has(svg)) {
+  background-color: var(--lemon);
+}
