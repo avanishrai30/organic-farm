@@ -62,9 +62,9 @@ if(window.gsap&&window.ScrollTrigger){gsap.registerPlugin(ScrollTrigger);const m
  const hero=$('.hero');if(hero){gsap.fromTo('.hero-content>*',{y:22,autoAlpha:0},{y:0,autoAlpha:1,duration:.95,stagger:.12,ease:'power3.out',clearProps:'transform,opacity,visibility'});gsap.to($('.ambient-video',hero),{yPercent:12,ease:'none',scrollTrigger:{trigger:hero,start:'top top',end:'bottom top',scrub:1}})}
  // Gentle continuous motion stays inside each vehicle/product display area.
  $$('.fleet-car').forEach((car,i)=>gsap.fromTo(car,{y:-3,scale:1,transformOrigin:'50% 50%'},{y:3,scale:1.008,duration:5+i,repeat:-1,yoyo:true,ease:'sine.inOut'}));
- // Cloud artwork movement.
- $$('.cloud-left img,.cloud-center img').forEach(el=>gsap.to(el,{x:35,y:8,duration:18,repeat:-1,yoyo:true,ease:'sine.inOut'}));
- $$('.hero-cloud').forEach((el,i)=>gsap.to(el,{xPercent:i===0?-10:i===2?10:0,y: i===1?35:15,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1.2}}));
+ // Organic floating milk layers movement & alternating smooth drift.
+ $$('.cloud-left img, .cloud-center img, .cloud-right img').forEach((el,i)=>gsap.to(el,{x:i%2?32:-36,y:i===1?12:i===0?8:-10,duration:17+i*2.5,repeat:-1,yoyo:true,ease:'sine.inOut'}));
+ $$('.hero-cloud').forEach((el,i)=>gsap.to(el,{xPercent:i===0?-12:i===2?12:0,y:i===1?38:20,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1.2}}));
  $$('[data-reveal]').forEach(el=>gsap.fromTo(el,{y:24},{y:0,duration:.85,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 94%',once:true}}));
  $$('[data-stamp]').forEach((el,i)=>gsap.fromTo(el,{rotation:i%2?13:-13,y:14},{rotation:i%2?5:-5,y:-5,ease:'none',scrollTrigger:{trigger:el.parentElement,start:'top bottom',end:'bottom 35%',scrub:1.2}}));
  $$('.ribbon').forEach(el=>gsap.fromTo($('.ribbon-track',el),{x:-80},{x:-500,ease:'none',scrollTrigger:{trigger:el,start:'top bottom',end:'bottom top',scrub:1.1}}));

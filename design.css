@@ -28,7 +28,36 @@
 #mobile-menu{color:var(--ink);max-width:460px;right:auto;width:100%;text-align:left}#mobile-menu a{font-size:22px}.footer-bottom .site-credit{display:inline-block;color:var(--ink);font-size:10px}.site-credit:hover{text-decoration:underline}
 @media(max-width:800px){.header{top:10px;width:calc(100% - 32px);height:62px;padding:10px 14px 10px 23px;grid-template-columns:1fr auto}.header>.brand{grid-column:1;justify-self:start}.header .brand strong{font-size:29px}.header .brand small{font-size:6px;letter-spacing:2px;margin-top:4px}.header>.menu-toggle{grid-column:2;justify-self:end}.header .menu-icon{width:37px;height:37px}.header .menu-label,.header>.nav-cta{display:none}.home .header:not(.is-scrolled){background:#fff;border-color:#c8c9c0;color:var(--ink)}.home .header:not(.is-scrolled) .menu-icon{background:var(--ink)}.home .header:not(.is-scrolled) .menu-icon i{background:#fff}#mobile-menu{max-width:none;left:0;right:0;width:100%;padding:15px 23px;max-height:calc(100dvh - 100px)}#mobile-menu a{font-size:20px;padding:12px 0}}
 @media(max-width:520px){.header{width:calc(100% - 24px);height:58px;padding:9px 11px 9px 21px}.header .brand strong{font-size:27px}.header .brand small{font-size:5px}.header .menu-icon{width:34px;height:34px}.footer-bottom{align-items:flex-start;gap:14px}.footer-bottom .site-credit{font-size:10px;width:100%;order:3}}
-.hero-clouds{display:none!important}
+/* Decorative organic milk floating cloud layers along the hero's lower edge */
+.hero-clouds{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.hero-cloud{position:absolute;pointer-events:none;will-change:transform}
+.hero-cloud img{width:100%;height:auto;max-width:none;will-change:transform;mix-blend-mode:screen;filter:drop-shadow(0 14px 28px rgba(0,0,0,0.12))}
+.cloud-left{width:min(1050px,76vw);left:-10vw;bottom:max(-240px,-19vw);opacity:.95}
+.cloud-center{width:min(1250px,88vw);left:50%;margin-left:max(-625px,-44vw);bottom:max(-210px,-16vw);opacity:.92}
+.cloud-right{width:min(950px,70vw);right:-12vw;bottom:max(-250px,-19vw);opacity:.90}
+.hero-content{position:relative;z-index:2}
+.hero-bottom{z-index:3;color:var(--ink);text-shadow:none}
+.hero-bottom a{color:var(--ink);font-weight:500}
+.hero-bottom span{color:var(--ink);font-weight:500}
+.hero .video-toggle{z-index:4;color:var(--ink);background:#ffffffd9;border-color:#1a1a1733}
+.hero .video-toggle:hover{background:#ffffff;color:var(--ink)}
+@media(max-width:800px){
+  .cloud-left{width:680px;left:-220px;bottom:-190px}
+  .cloud-center{width:720px;margin-left:-360px;bottom:-160px}
+  .cloud-right{width:620px;right:-240px;bottom:-180px}
+}
+@media(max-width:520px){
+  .cloud-left{width:500px;left:-180px;bottom:-150px}
+  .cloud-center{width:540px;margin-left:-270px;bottom:-130px}
+  .cloud-right{width:480px;right:-200px;bottom:-140px}
+  .hero .video-toggle{right:16px;bottom:20px;padding:6px 10px;font-size:10px;gap:5px;min-height:34px;white-space:nowrap}
+}
+@media(prefers-reduced-motion:reduce){.hero-cloud,.hero-cloud img{will-change:auto}}
+/* Dissolve the moving milk cloud bank into the next white section without harsh lines */
+.hero-clouds::after{content:'';position:absolute;z-index:2;left:0;right:0;bottom:-1px;height:clamp(140px,16vw,250px);background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.1) 20%,rgba(255,255,255,.45) 50%,rgba(255,255,255,.88) 80%,#fff 96%,#fff 100%);pointer-events:none}
+@media(max-width:800px){.hero-clouds::after{height:140px}}
+@media(max-width:520px){.hero-clouds::after{height:105px}}
+
 
 /* Full-width model photography with slow movement contained inside the cards. */
 .fleet{gap:25px;align-items:stretch}.fleet-card{padding:12px 12px 29px;overflow:hidden;border:1px solid #e6e8df;display:flex;flex-direction:column;align-items:center}.fleet-stage{position:relative;width:100%;height:240px;overflow:hidden;border-radius:17px;background:#f7f8f4;margin-bottom:23px;display:grid;place-items:center}.fleet-card .fleet-stage img{width:94%;height:90%;margin:0;object-fit:contain;will-change:transform}.fleet-card:nth-child(2) .fleet-stage img{width:100%;height:100%;object-fit:cover}.fleet-card:nth-child(3) .fleet-stage img{width:140%;max-width:none;height:100%;object-fit:contain}.fleet-road{position:absolute;bottom:0;left:0;right:0;height:3px;background:repeating-linear-gradient(90deg,#b1b9a4 0 28px,transparent 28px 60px);opacity:.5}.fleet-card h3{margin:20px 0 18px}.fleet-card .text-button{margin-top:auto;min-height:44px}.fleet-note{font-size:11px;text-align:center;margin:18px auto 0;color:var(--muted)}
